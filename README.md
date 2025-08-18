@@ -1,3 +1,7 @@
+# Anson Vattakunnel - ePortfolio
+
+This repository contains the ePortfolio website for Anson Vattakunnel, created as an assignment for EEE4125C.
+
 ## Project Setup
 
 ```sh
