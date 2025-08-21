@@ -19,7 +19,14 @@
           <div class="photo-placeholder">
             <img :src="profilePhoto" alt="Anson Vattakunnel" class="profile-image" @error="handleImageError" @load="handleImageLoad" />
             <div class="photo-fallback">
-              <div class="fallback-icon">👨‍💻</div>
+              <div class="fallback-icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                <path d="M9 12l2 2 4-4"/>
+                <circle cx="12" cy="18" r="2"/>
+              </svg>
+            </div>
               <p>Professional Photo</p>
             </div>
           </div>
@@ -29,15 +36,41 @@
 
     <section class="highlights">
       <div class="highlight-card">
-        <h3>⚡ Hardware & Software</h3>
+        <h3>
+          <svg class="highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+            <line x1="6" y1="6" x2="6.01" y2="6"/>
+            <line x1="6" y1="18" x2="6.01" y2="18"/>
+            <path d="m12 8-2 4 2 4"/>
+          </svg>
+          Hardware & Software
+        </h3>
         <p>Bridging embedded systems with modern software development</p>
       </div>
       <div class="highlight-card">
-        <h3>🐧 Open Source</h3>
+        <h3>
+          <svg class="highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v6m0 6v6"/>
+            <path d="m17 7-3 3 3 3"/>
+            <path d="m7 7 3 3-3 3"/>
+            <path d="M12 8c2.76 0 5-2.24 5-5H7c0 2.76 2.24 5 5 5z"/>
+            <path d="M12 16c-2.76 0-5 2.24-5 5h10c0-2.76-2.24-5-5-5z"/>
+          </svg>
+          Open Source
+        </h3>
         <p>Contributing to FOSS projects and Linux kernel development</p>
       </div>
       <div class="highlight-card">
-        <h3>🔒 Privacy & Security</h3>
+        <h3>
+          <svg class="highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 7l9 5 9-5-9-5z"/>
+            <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/>
+            <circle cx="12" cy="13" r="3"/>
+          </svg>
+          Privacy & Security
+        </h3>
         <p>Building privacy-conscious and secure technologies</p>
       </div>
     </section>
@@ -160,8 +193,13 @@ const handleImageLoad = (event: Event) => {
 }
 
 .fallback-icon {
-  font-size: 4rem;
   margin-bottom: 0.5rem;
+}
+
+.fallback-icon svg {
+  width: 64px;
+  height: 64px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .photo-fallback p {
@@ -232,6 +270,19 @@ const handleImageLoad = (event: Event) => {
   color: var(--primary-purple);
   margin-bottom: 1rem;
   font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.highlight-icon {
+  color: var(--primary-purple);
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover .highlight-icon {
+  transform: scale(1.1);
 }
 
 .highlight-card p {

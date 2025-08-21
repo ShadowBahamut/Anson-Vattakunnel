@@ -9,7 +9,13 @@
       <section class="about-content">
         <div class="profile-section">
           <div class="profile-text">
-            <h2>Hello, I'm Anson! 👋</h2>
+            <h2>
+              Hello, I'm Anson!
+              <svg class="greeting-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                <path d="M15 5l4 4"/>
+              </svg>
+            </h2>
             <p>
               I'm a 4th year Electrical and Computer Engineering student at the University of Cape Town (UCT),
               passionate about building innovative solutions at the intersection of hardware and software.
@@ -65,18 +71,30 @@
           <h2>What Drives Me</h2>
           <div class="values-grid">
             <div class="value-card">
-              <span class="value-icon">🐧</span>
+              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v12"/>
+                <path d="M6 12h12"/>
+                <path d="M8 8l8 8"/>
+                <path d="M16 8l-8 8"/>
+              </svg>
               <h3>Open Source</h3>
               <p>Contributing to FOSS projects and the Linux kernel, believing in the power of community-driven
                 development.</p>
             </div>
             <div class="value-card">
-              <span class="value-icon">🔒</span>
+              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L3 7l9 5 9-5-9-5z"/>
+                <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/>
+                <circle cx="12" cy="13" r="3"/>
+              </svg>
               <h3>Privacy & Security</h3>
               <p>Building technology that respects user privacy and implements security by design principles.</p>
             </div>
             <div class="value-card">
-              <span class="value-icon">⚡</span>
+              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+              </svg>
               <h3>Innovation</h3>
               <p>From blockchain voting systems to autonomous robots, I love exploring cutting-edge technologies.</p>
             </div>
@@ -165,6 +183,20 @@
   color: var(--primary-purple);
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.greeting-icon {
+  color: var(--primary-purple);
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-10deg); }
 }
 
 .profile-text p {
@@ -238,9 +270,16 @@
 }
 
 .value-icon {
-  font-size: 3rem;
-  display: block;
+  width: 48px;
+  height: 48px;
+  color: var(--primary-purple);
   margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.15);
+  color: var(--primary-purple-light);
 }
 
 .value-card h3 {

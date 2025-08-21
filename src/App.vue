@@ -85,11 +85,6 @@
       <router-view />
     </main>
 
-    <footer class="app-footer">
-      <div class="footer-content">
-        <p>&copy; 2025 Anson Vattakunnel. Built with Vue 3 & TypeScript.</p>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -383,23 +378,6 @@ const closeMobileMenu = () => {
   padding-top: 70px;
 }
 
-.app-footer {
-  background: var(--color-background-soft);
-  border-top: 1px solid var(--color-border);
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.footer-content p {
-  color: var(--color-text);
-  font-size: 0.9rem;
-}
 
 @media (max-width: 768px) {
   .main-nav {
