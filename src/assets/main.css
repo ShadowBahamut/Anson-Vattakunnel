@@ -10,18 +10,18 @@
 a,
 .green {
   text-decoration: none;
-  color: #56BB47;
+  color: var(--primary-purple);
   transition: 0.4s;
   padding: 3px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: rgba(86, 187, 71, 0.2);
+    background-color: rgba(139, 92, 246, 0.2);
   }
 }
 
 .purple {
-  color: #AC47BA;
+  color: var(--primary-purple);
 }
 
