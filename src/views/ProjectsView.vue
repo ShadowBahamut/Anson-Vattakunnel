@@ -2,12 +2,12 @@
   <div class="projects">
     <div class="container">
       <header class="projects-header">
-        <h1>My Projects</h1>
-        <p class="subtitle">A collection of work that showcases my skills and passion</p>
+        <h1 class="animate-fade-in-up">My Projects</h1>
+        <p class="subtitle animate-fade-in-up" style="animation-delay: 0.3s;">A collection of work that showcases my skills and passion</p>
       </header>
 
-      <section class="featured-project">
-        <div class="project-showcase">
+      <section class="featured-project animate-fade-in-up" style="animation-delay: 0.6s;">
+        <div class="project-showcase animate-float">
           <div class="project-info">
             <span class="project-label">Featured Project</span>
             <h2>
@@ -28,11 +28,11 @@
               maintaining voter privacy through advanced cryptographic techniques.
             </p>
             <div class="tech-stack">
-              <span class="tech-tag">Algorand</span>
-              <span class="tech-tag">Blockchain</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Smart Contracts</span>
-              <span class="tech-tag">Cryptography</span>
+              <span class="tech-tag hover-glow">Algorand</span>
+              <span class="tech-tag hover-glow">Blockchain</span>
+              <span class="tech-tag hover-glow">Python</span>
+              <span class="tech-tag hover-glow">Smart Contracts</span>
+              <span class="tech-tag hover-glow">Cryptography</span>
             </div>
             <div class="project-links">
               <a href="#" class="btn primary">Source Code</a>
@@ -79,8 +79,8 @@
       <section class="projects-grid">
         <h2 class="section-title">Other Projects</h2>
         
-        <div class="grid">
-          <div class="project-card">
+        <div class="grid stagger-children">
+          <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
                 <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -102,17 +102,17 @@
               working code and demonstration video.
             </p>
             <div class="tech-stack">
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">Embedded Systems</span>
-              <span class="tech-tag">Sensors</span>
-              <span class="tech-tag">Pathfinding</span>
+              <span class="tech-tag hover-glow">C++</span>
+              <span class="tech-tag hover-glow">Embedded Systems</span>
+              <span class="tech-tag hover-glow">Sensors</span>
+              <span class="tech-tag hover-glow">Pathfinding</span>
             </div>
             <div class="card-footer">
               <a href="https://github.com/ShadowBahamut/micromouse" target="_blank" rel="noopener noreferrer" class="btn small">View on GitHub</a>
             </div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
                 <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -132,17 +132,17 @@
               modern web development practices.
             </p>
             <div class="tech-stack">
-              <span class="tech-tag">Vue 3</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Vite</span>
-              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag hover-glow">Vue 3</span>
+              <span class="tech-tag hover-glow">TypeScript</span>
+              <span class="tech-tag hover-glow">Vite</span>
+              <span class="tech-tag hover-glow">CSS3</span>
             </div>
             <div class="card-footer">
               <a href="#" class="btn small">Source Code</a>
             </div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
                 <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -159,17 +159,17 @@
               Forked and enhanced Hyprlock with custom animations support, enabling live wallpapers as lock screens. Features smooth transitions, video backgrounds, and dynamic effects for a modern lock screen experience on Hyprland.
             </p>
             <div class="tech-stack">
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">Wayland</span>
-              <span class="tech-tag">Hyprland</span>
-              <span class="tech-tag">Animation</span>
+              <span class="tech-tag hover-glow">C++</span>
+              <span class="tech-tag hover-glow">Wayland</span>
+              <span class="tech-tag hover-glow">Hyprland</span>
+              <span class="tech-tag hover-glow">Animation</span>
             </div>
             <div class="card-footer">
               <a href="#" class="btn small">View Fork</a>
             </div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
                 <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -188,10 +188,10 @@
               system optimization and bug fixes. Part of my commitment to FOSS development.
             </p>
             <div class="tech-stack">
-              <span class="tech-tag">C</span>
-              <span class="tech-tag">Linux Kernel</span>
-              <span class="tech-tag">System Programming</span>
-              <span class="tech-tag">Git</span>
+              <span class="tech-tag hover-glow">C</span>
+              <span class="tech-tag hover-glow">Linux Kernel</span>
+              <span class="tech-tag hover-glow">System Programming</span>
+              <span class="tech-tag hover-glow">Git</span>
             </div>
           </div>
         </div>
@@ -309,6 +309,13 @@
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  animation: glow 0.5s ease-in-out;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
 }
 
 .project-links {
@@ -577,5 +584,102 @@
   .cta-content p {
     text-align: justify;
   }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% { 
+    box-shadow: 0 0 5px rgba(147, 51, 234, 0.3);
+    transform: translateY(0);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.6), 0 0 30px rgba(147, 51, 234, 0.4);
+    transform: translateY(-3px);
+  }
+  100% { 
+    box-shadow: 0 0 5px rgba(147, 51, 234, 0.3);
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-scale {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Enhanced stagger animation */
+.stagger-children > *:nth-child(1) { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+  animation-delay: 0.2s; 
+  opacity: 0;
+}
+.stagger-children > *:nth-child(2) { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+  animation-delay: 0.4s; 
+  opacity: 0;
+}
+.stagger-children > *:nth-child(3) { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+  animation-delay: 0.6s; 
+  opacity: 0;
+}
+.stagger-children > *:nth-child(4) { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+  animation-delay: 0.8s; 
+  opacity: 0;
+}
+
+/* Enhanced hover effects for tech tags */
+.tech-tag.hover-glow:hover {
+  animation: glow 0.6s ease-in-out;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Scale animation for project cards */
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(147, 51, 234, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 </style>

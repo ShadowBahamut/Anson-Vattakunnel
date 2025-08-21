@@ -1,22 +1,22 @@
 <template>
   <div class="home">
-    <section class="hero">
+    <section class="hero animate-gradient">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="name">Anson Vattakunnel</h1>
-          <p class="title">Electrical & Computer Engineering Student</p>
-          <p class="subtitle">UCT • FOSS Advocate • Linux Kernel Contributor</p>
-          <p class="description">
+          <h1 class="name typewriter-text animate-fade-in-up">Anson Vattakunnel</h1>
+          <p class="title animate-fade-in-up" style="animation-delay: 0.3s;">Electrical & Computer Engineering Student</p>
+          <p class="subtitle animate-fade-in-up" style="animation-delay: 0.6s;">UCT • FOSS Advocate • Linux Kernel Contributor</p>
+          <p class="description animate-fade-in-up" style="animation-delay: 0.9s;">
             4th year ECE student passionate about open-source development, privacy-focused technologies,
             and innovative solutions at the intersection of hardware and software.
           </p>
-          <div class="cta-buttons">
-            <router-link to="/projects" class="cta-btn primary">View Projects</router-link>
-            <router-link to="/cv" class="cta-btn secondary">Download CV</router-link>
+          <div class="cta-buttons animate-fade-in-up" style="animation-delay: 1.2s;">
+            <router-link to="/projects" class="cta-btn primary animate-pulse">View Projects</router-link>
+            <router-link to="/cv" class="cta-btn secondary animate-pulse" style="animation-delay: 0.5s;">Download CV</router-link>
           </div>
         </div>
-        <div class="hero-photo">
-          <div class="photo-placeholder">
+        <div class="hero-photo animate-fade-in-up" style="animation-delay: 0.5s;">
+          <div class="photo-placeholder animate-float">
             <img :src="profilePhoto" alt="Anson Vattakunnel" class="profile-image" @error="handleImageError" @load="handleImageLoad" />
             <div class="photo-fallback">
               <div class="fallback-icon">
@@ -34,8 +34,8 @@
       </div>
     </section>
 
-    <section class="highlights">
-      <div class="highlight-card">
+    <section class="highlights stagger-children">
+      <div class="highlight-card hover-lift">
         <h3>
           <svg class="highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
@@ -48,7 +48,7 @@
         </h3>
         <p>Bridging embedded systems with modern software development</p>
       </div>
-      <div class="highlight-card">
+      <div class="highlight-card hover-lift">
         <h3>
           <svg class="highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="3"/>
@@ -62,7 +62,7 @@
         </h3>
         <p>Contributing to FOSS projects and Linux kernel development</p>
       </div>
-      <div class="highlight-card">
+      <div class="highlight-card hover-lift">
         <h3>
           <svg class="highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 2L3 7l9 5 9-5-9-5z"/>
@@ -290,6 +290,93 @@ const handleImageLoad = (event: Event) => {
   line-height: 1.6;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+/* Custom animations */
+.typewriter-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--primary-purple);
+  animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: var(--primary-purple); }
+  51%, 100% { border-color: transparent; }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, var(--color-background), var(--color-background-soft), var(--color-background), var(--color-background-mute));
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(147, 51, 234, 0.15);
+}
+
+/* Animation delays for stagger effect */
+.stagger-children > *:nth-child(1) { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+  animation-delay: 0.2s; 
+  opacity: 0;
+}
+.stagger-children > *:nth-child(2) { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+  animation-delay: 0.4s; 
+  opacity: 0;
+}
+.stagger-children > *:nth-child(3) { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+  animation-delay: 0.6s; 
+  opacity: 0;
 }
 
 @media (max-width: 768px) {

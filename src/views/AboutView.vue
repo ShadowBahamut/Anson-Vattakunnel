@@ -1,27 +1,27 @@
 <template>
-  <div class="about">
+  <div class="about animate-gradient">
     <div class="container">
       <header class="about-header">
-        <h1>About Me</h1>
-        <p class="subtitle">Getting to know Anson Vattakunnel</p>
+        <h1 class="animate-fade-in-up">About Me</h1>
+        <p class="subtitle animate-fade-in-up" style="animation-delay: 0.3s;">Getting to know Anson Vattakunnel</p>
       </header>
 
       <section class="about-content">
-        <div class="profile-section">
+        <div class="profile-section animate-fade-in-up" style="animation-delay: 0.6s;">
           <div class="profile-text">
             <h2>
               Hello, I'm Anson!
-              <svg class="greeting-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg class="greeting-icon animate-wave" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
                 <path d="M15 5l4 4"/>
               </svg>
             </h2>
-            <p>
+            <p class="animate-fade-in-up" style="animation-delay: 0.9s;">
               I'm a 4th year Electrical and Computer Engineering student at the University of Cape Town (UCT),
               passionate about building innovative solutions at the intersection of hardware and software.
               My journey in technology is driven by curiosity and a commitment to open-source principles.
             </p>
-            <p>
+            <p class="animate-fade-in-up" style="animation-delay: 1.2s;">
               As a FOSS advocate and privacy-conscious developer, I believe in creating technology that
               respects user freedom and privacy. I enjoy tinkering with Linux systems and have contributed
               patches to the Linux kernel. Whether it's developing blockchain-based solutions, programming
@@ -31,9 +31,9 @@
           </div>
         </div>
 
-        <div class="skills-section">
+        <div class="skills-section animate-fade-in-up" style="animation-delay: 1.5s;">
           <h2>Skills & Expertise</h2>
-          <div class="skills-grid">
+          <div class="skills-grid stagger-children">
             <div class="skill-category">
               <h3>Engineering & Hardware</h3>
               <ul>
@@ -67,10 +67,10 @@
           </div>
         </div>
 
-        <div class="values-section">
+        <div class="values-section animate-fade-in-up" style="animation-delay: 1.8s;">
           <h2>What Drives Me</h2>
-          <div class="values-grid">
-            <div class="value-card">
+          <div class="values-grid stagger-children">
+            <div class="value-card animate-float hover-lift">
               <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M12 6v12"/>
@@ -82,7 +82,7 @@
               <p>Contributing to FOSS projects and the Linux kernel, believing in the power of community-driven
                 development.</p>
             </div>
-            <div class="value-card">
+            <div class="value-card animate-float hover-lift">
               <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2L3 7l9 5 9-5-9-5z"/>
                 <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/>
@@ -91,7 +91,7 @@
               <h3>Privacy & Security</h3>
               <p>Building technology that respects user privacy and implements security by design principles.</p>
             </div>
-            <div class="value-card">
+            <div class="value-card animate-float hover-lift">
               <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
               </svg>
@@ -190,7 +190,10 @@
 
 .greeting-icon {
   color: var(--primary-purple);
-  animation: wave 2s infinite;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
 }
 
 @keyframes wave {
@@ -442,5 +445,92 @@
   .contact-section p {
     text-align: justify;
   }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, var(--color-background), var(--color-background-soft), var(--color-background-mute), var(--color-background));
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Enhanced stagger animations */
+.stagger-children > *:nth-child(1) {
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.stagger-children > *:nth-child(2) {
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.stagger-children > *:nth-child(3) {
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+/* Floating animation with different delays for value cards */
+.value-card:nth-child(1) .animate-float {
+  animation-delay: 0s;
+}
+
+.value-card:nth-child(2) .animate-float {
+  animation-delay: 2s;
+}
+
+.value-card:nth-child(3) .animate-float {
+  animation-delay: 4s;
 }
 </style>

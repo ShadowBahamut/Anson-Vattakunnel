@@ -2,14 +2,14 @@
   <div class="cv-view">
     <div class="container">
       <header class="cv-header">
-        <h1>Curriculum Vitae</h1>
-        <p class="subtitle">Professional resume and experience overview</p>
+        <h1 class="animate-fade-in-up">Curriculum Vitae</h1>
+        <p class="subtitle animate-fade-in-up" style="animation-delay: 0.3s;">Professional resume and experience overview</p>
       </header>
 
-      <section class="cv-content">
+      <section class="cv-content animate-fade-in-up" style="animation-delay: 0.6s;">
         <div class="cv-preview">
-          <div class="preview-card">
-            <div class="document-icon">
+          <div class="preview-card hover-lift">
+            <div class="document-icon animate-bounce">
               <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                 <polyline points="14,2 14,8 20,8"/>
@@ -58,7 +58,7 @@
 
         <div class="cv-actions">
           <div class="action-buttons">
-            <a href="/cv.pdf" download class="btn primary large">
+            <a href="/cv.pdf" download class="btn primary large animate-pulse">
               <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7,10 12,15 17,10"/>
@@ -75,9 +75,9 @@
             </a>
           </div>
           
-          <div class="quick-info">
+          <div class="quick-info animate-fade-in-up" style="animation-delay: 0.3s;">
             <h3>What's Inside</h3>
-            <ul class="info-list">
+            <ul class="info-list stagger-children">
               <li>
                 <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
@@ -122,7 +122,7 @@
         </div>
       </section>
 
-      <section class="alternative-actions">
+      <section class="alternative-actions animate-fade-in-up" style="animation-delay: 0.9s;">
         <div class="alt-content">
           <h2>Prefer Other Formats?</h2>
           <p>Explore different ways to learn about my background</p>
@@ -448,5 +448,104 @@
   .alt-content p {
     text-align: justify;
   }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
+  }
+}
+
+@keyframes bounceCustom {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-bounce {
+  animation: bounceCustom 2s ease-in-out infinite;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Stagger animation for info list */
+.stagger-children > li:nth-child(1) {
+  animation: slideInLeft 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.stagger-children > li:nth-child(2) {
+  animation: slideInLeft 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.stagger-children > li:nth-child(3) {
+  animation: slideInLeft 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.stagger-children > li:nth-child(4) {
+  animation: slideInLeft 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.stagger-children > li:nth-child(5) {
+  animation: slideInLeft 0.6s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 </style>

@@ -3,15 +3,15 @@
     <header class="app-header">
       <nav class="main-nav">
         <div class="nav-brand">
-          <router-link to="/" class="brand-link">AV</router-link>
+          <router-link to="/" class="brand-link animate-float">AV</router-link>
         </div>
         
         <!-- Desktop Navigation -->
         <ul class="nav-links desktop-only">
-          <li><router-link to="/" class="nav-link">Home</router-link></li>
-          <li><router-link to="/projects" class="nav-link">Projects</router-link></li>
-          <li><router-link to="/cv" class="nav-link">CV</router-link></li>
-          <li><router-link to="/about" class="nav-link">About</router-link></li>
+          <li><router-link to="/" class="nav-link hover-glow">Home</router-link></li>
+          <li><router-link to="/projects" class="nav-link hover-glow">Projects</router-link></li>
+          <li><router-link to="/cv" class="nav-link hover-glow">CV</router-link></li>
+          <li><router-link to="/about" class="nav-link hover-glow">About</router-link></li>
         </ul>
         
         <div class="nav-actions">
@@ -55,8 +55,8 @@
       </nav>
       
       <!-- Mobile Dropdown Menu -->
-      <div v-if="isMobileMenuOpen" class="mobile-menu">
-        <ul class="mobile-nav-links">
+      <div v-if="isMobileMenuOpen" class="mobile-menu animate-fade-in-down">
+        <ul class="mobile-nav-links stagger-children">
           <li><router-link to="/" class="mobile-nav-link" @click="closeMobileMenu">Home</router-link></li>
           <li><router-link to="/projects" class="mobile-nav-link" @click="closeMobileMenu">Projects</router-link></li>
           <li><router-link to="/cv" class="mobile-nav-link" @click="closeMobileMenu">CV</router-link></li>
@@ -179,6 +179,11 @@ const closeMobileMenu = () => {
   background: rgba(147, 51, 234, 0.1);
 }
 
+.hover-glow:hover {
+  animation: glow 0.5s ease-in-out;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.7);
+}
+
 .nav-link.router-link-active {
   color: var(--primary-purple-light);
   font-weight: 700;
@@ -289,7 +294,8 @@ const closeMobileMenu = () => {
   background: var(--color-background);
   border-bottom: 2px solid var(--primary-purple);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: slideDown 0.3s ease;
+  backdrop-filter: blur(10px);
+  transform-origin: top;
 }
 
 @keyframes slideDown {
@@ -395,6 +401,77 @@ const closeMobileMenu = () => {
   .app-main {
     padding-top: 70px;
   }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(147, 51, 234, 0.5); }
+  50% { text-shadow: 0 0 20px rgba(147, 51, 234, 0.8), 0 0 30px rgba(147, 51, 234, 0.6); }
+  100% { text-shadow: 0 0 5px rgba(147, 51, 234, 0.5); }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.4s ease-out;
+}
+
+/* Stagger animation for mobile menu items */
+.stagger-children > li:nth-child(1) {
+  animation: slideInLeft 0.4s ease-out;
+  animation-delay: 0.1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.stagger-children > li:nth-child(2) {
+  animation: slideInLeft 0.4s ease-out;
+  animation-delay: 0.2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.stagger-children > li:nth-child(3) {
+  animation: slideInLeft 0.4s ease-out;
+  animation-delay: 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.stagger-children > li:nth-child(4) {
+  animation: slideInLeft 0.4s ease-out;
+  animation-delay: 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 @media (max-width: 480px) {
