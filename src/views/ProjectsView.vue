@@ -35,8 +35,7 @@
               <span class="tech-tag">Cryptography</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn primary">View Demo</a>
-              <a href="#" class="btn secondary">Source Code</a>
+              <a href="#" class="btn primary">Source Code</a>
             </div>
           </div>
           <div class="project-visual">
@@ -109,36 +108,7 @@
               <span class="tech-tag">Pathfinding</span>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn small">View Demo Video</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="card-header">
-              <h3>
-                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 6v12"/>
-                  <path d="M6 12h12"/>
-                  <path d="M8 8l8 8"/>
-                  <path d="M16 8l-8 8"/>
-                </svg>
-                Linux Kernel Contributions
-              </h3>
-              <span class="project-type">Open Source</span>
-            </div>
-            <p class="card-description">
-              Contributing patches and improvements to the Linux kernel, focusing on 
-              system optimization and bug fixes. Part of my commitment to FOSS development.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-tag">C</span>
-              <span class="tech-tag">Linux Kernel</span>
-              <span class="tech-tag">System Programming</span>
-              <span class="tech-tag">Git</span>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn small">View Patches</a>
+              <a href="https://github.com/ShadowBahamut/micromouse" target="_blank" rel="noopener noreferrer" class="btn small">View on GitHub</a>
             </div>
           </div>
 
@@ -196,6 +166,32 @@
             </div>
             <div class="card-footer">
               <a href="#" class="btn small">View Fork</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="card-header">
+              <h3>
+                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v12"/>
+                  <path d="M6 12h12"/>
+                  <path d="M8 8l8 8"/>
+                  <path d="M16 8l-8 8"/>
+                </svg>
+                Linux Kernel Contributions
+              </h3>
+              <span class="project-type">Open Source</span>
+            </div>
+            <p class="card-description">
+              Contributing patches and improvements to the Linux kernel, focusing on 
+              system optimization and bug fixes. Part of my commitment to FOSS development.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Linux Kernel</span>
+              <span class="tech-tag">System Programming</span>
+              <span class="tech-tag">Git</span>
             </div>
           </div>
         </div>
