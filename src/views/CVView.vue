@@ -93,6 +93,8 @@
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .container {
@@ -110,14 +112,14 @@
 
 .cv-header h1 {
   font-size: 3rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #56BB47;
+  color: var(--primary-purple);
   font-weight: 500;
 }
 
@@ -140,7 +142,7 @@
   padding: 3rem 2rem;
   text-align: center;
   max-width: 350px;
-  box-shadow: 0 8px 25px rgba(172, 71, 186, 0.1);
+  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.1);
 }
 
 .document-icon {
@@ -150,13 +152,13 @@
 
 .preview-card h2 {
   font-size: 1.8rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .document-type {
-  color: #56BB47;
+  color: var(--primary-purple);
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -166,6 +168,8 @@
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .document-meta {
@@ -208,35 +212,35 @@
 }
 
 .btn.primary {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
 }
 
 .btn.primary:hover {
-  background: #B85BC5;
+  background: var(--primary-purple-light);
   transform: translateY(-2px);
 }
 
 .btn.secondary {
   background: transparent;
-  color: #56BB47;
-  border: 2px solid #56BB47;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
 }
 
 .btn.secondary:hover {
-  background: #56BB47;
+  background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
 }
 
 .btn.outline {
   background: transparent;
-  color: #AC47BA;
-  border: 2px solid #AC47BA;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
 }
 
 .btn.outline:hover {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
 }
@@ -246,7 +250,7 @@
 }
 
 .quick-info h3 {
-  color: #AC47BA;
+  color: var(--primary-purple);
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -291,7 +295,7 @@
 }
 
 .alt-content h2 {
-  color: #AC47BA;
+  color: var(--primary-purple);
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -301,6 +305,8 @@
   color: var(--color-text);
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .alt-buttons {
@@ -311,6 +317,10 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .cv-header h1 {
     font-size: 2.5rem;
   }
@@ -319,6 +329,14 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .preview-card {
+    max-width: 100%;
+  }
+
+  .document-description {
+    text-align: justify;
+  }
   
   .action-buttons {
     align-items: center;
@@ -326,6 +344,7 @@
   
   .btn.large {
     width: 250px;
+    max-width: 100%;
   }
   
   .alt-buttons {
@@ -335,6 +354,11 @@
   
   .btn.outline {
     width: 200px;
+    max-width: 100%;
+  }
+
+  .alt-content p {
+    text-align: justify;
   }
 }
 </style>

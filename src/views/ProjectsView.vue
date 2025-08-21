@@ -120,21 +120,20 @@
 
           <div class="project-card">
             <div class="card-header">
-              <h3>🔒 Privacy Tools</h3>
-              <span class="project-type">Security</span>
+              <h3>🎨 Hyprlock Animated</h3>
+              <span class="project-type">Open Source</span>
             </div>
             <p class="card-description">
-              Collection of privacy-focused tools and utilities for secure computing. 
-              Includes encryption helpers, secure communication tools, and privacy auditing scripts.
+              Forked and enhanced Hyprlock with custom animations support, enabling live wallpapers as lock screens. Features smooth transitions, video backgrounds, and dynamic effects for a modern lock screen experience on Hyprland.
             </p>
             <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Cryptography</span>
-              <span class="tech-tag">Privacy</span>
-              <span class="tech-tag">Security</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Wayland</span>
+              <span class="tech-tag">Hyprland</span>
+              <span class="tech-tag">Animation</span>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn small">View Tools</a>
+              <a href="#" class="btn small">View Fork</a>
             </div>
           </div>
         </div>
@@ -163,6 +162,8 @@
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .container {
@@ -180,14 +181,14 @@
 
 .projects-header h1 {
   font-size: 3rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #56BB47;
+  color: var(--primary-purple);
   font-weight: 500;
 }
 
@@ -208,7 +209,7 @@
 
 .project-label {
   display: inline-block;
-  background: #56BB47;
+  background: var(--primary-purple);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -219,7 +220,7 @@
 
 .project-info h2 {
   font-size: 2.5rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
@@ -229,6 +230,8 @@
   line-height: 1.8;
   color: var(--color-text);
   margin-bottom: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .tech-stack {
@@ -239,7 +242,7 @@
 }
 
 .tech-tag {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -276,19 +279,19 @@
   width: 80px;
   height: 80px;
   background: var(--color-background);
-  border: 2px solid #AC47BA;
+  border: 2px solid var(--primary-purple);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(172, 71, 186, 0.2);
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.2);
 }
 
 .block-header {
   font-size: 0.7rem;
   font-weight: 600;
-  color: #56BB47;
+  color: var(--primary-purple);
   margin-bottom: 0.25rem;
 }
 
@@ -297,14 +300,14 @@
 }
 
 .chain-link {
-  color: #AC47BA;
+  color: var(--primary-purple);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .section-title {
   font-size: 2rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 700;
@@ -327,7 +330,7 @@
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(172, 71, 186, 0.15);
+  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.15);
 }
 
 .card-header {
@@ -338,13 +341,13 @@
 }
 
 .card-header h3 {
-  color: #AC47BA;
+  color: var(--primary-purple);
   font-size: 1.3rem;
   font-weight: 600;
 }
 
 .project-type {
-  background: #56BB47;
+  background: var(--primary-purple-light);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
@@ -356,6 +359,8 @@
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .card-footer {
@@ -376,23 +381,23 @@
 }
 
 .btn.primary {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
 }
 
 .btn.primary:hover {
-  background: #B85BC5;
+  background: var(--primary-purple-light);
   transform: translateY(-2px);
 }
 
 .btn.secondary {
   background: transparent;
-  color: #56BB47;
-  border: 2px solid #56BB47;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
 }
 
 .btn.secondary:hover {
-  background: #56BB47;
+  background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
 }
@@ -401,12 +406,12 @@
   padding: 8px 16px;
   font-size: 0.9rem;
   background: transparent;
-  color: #AC47BA;
-  border: 1px solid #AC47BA;
+  color: var(--primary-purple);
+  border: 1px solid var(--primary-purple);
 }
 
 .btn.small:hover {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
 }
 
@@ -420,7 +425,7 @@
 
 .cta-content h2 {
   font-size: 2rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -429,6 +434,8 @@
   font-size: 1.1rem;
   color: var(--color-text);
   margin-bottom: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .cta-buttons {
@@ -451,6 +458,10 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .projects-header h1 {
     font-size: 2.5rem;
   }
@@ -458,9 +469,21 @@
   .project-info h2 {
     font-size: 2rem;
   }
+
+  .project-description {
+    text-align: justify;
+  }
   
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .card-description {
+    text-align: justify;
   }
   
   .cta-buttons {
@@ -470,6 +493,11 @@
   
   .btn {
     width: 200px;
+    max-width: 100%;
+  }
+
+  .cta-content p {
+    text-align: justify;
   }
 }
 </style>

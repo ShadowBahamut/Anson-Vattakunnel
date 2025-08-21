@@ -119,6 +119,8 @@
   padding: 2rem 0;
   width: 100%;
   overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .container {
@@ -136,14 +138,14 @@
 
 .about-header h1 {
   font-size: 3rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #56BB47;
+  color: var(--primary-purple);
   font-weight: 500;
 }
 
@@ -160,7 +162,7 @@
 }
 
 .profile-text h2 {
-  color: #AC47BA;
+  color: var(--primary-purple);
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -170,11 +172,13 @@
   margin-bottom: 1.5rem;
   color: var(--color-text);
   font-size: 1.1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .skills-section h2,
 .values-section h2 {
-  color: #AC47BA;
+  color: var(--primary-purple);
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -194,7 +198,7 @@
 }
 
 .skill-category h3 {
-  color: #56BB47;
+  color: var(--primary-purple);
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -240,7 +244,7 @@
 }
 
 .value-card h3 {
-  color: #56BB47;
+  color: var(--primary-purple-light);
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -248,6 +252,8 @@
 .value-card p {
   color: var(--color-text);
   line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 
@@ -262,7 +268,7 @@
 }
 
 .contact-section h2 {
-  color: #AC47BA;
+  color: var(--primary-purple);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -271,6 +277,8 @@
   font-size: 1.1rem;
   color: var(--color-text);
   margin-bottom: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .email-container {
@@ -283,9 +291,9 @@
   gap: 0.75rem;
   padding: 1rem 2rem;
   background: var(--color-background-soft);
-  border: 2px solid #AC47BA;
+  border: 2px solid var(--primary-purple);
   border-radius: 50px;
-  color: #AC47BA;
+  color: var(--primary-purple);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
@@ -293,10 +301,10 @@
 }
 
 .email-link:hover {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(172, 71, 186, 0.3);
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
 }
 
 .email-link svg {
@@ -322,28 +330,32 @@
 }
 
 .btn.primary {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
 }
 
 .btn.primary:hover {
-  background: #B85BC5;
+  background: var(--primary-purple-light);
   transform: translateY(-2px);
 }
 
 .btn.secondary {
   background: transparent;
-  color: #56BB47;
-  border: 2px solid #56BB47;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
 }
 
 .btn.secondary:hover {
-  background: #56BB47;
+  background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .about-header h1 {
     font-size: 2.5rem;
   }
@@ -353,9 +365,22 @@
     text-align: center;
   }
 
+  .profile-text p {
+    text-align: justify;
+  }
+
   .skills-grid,
   .values-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skill-category,
+  .value-card {
+    max-width: 100%;
+  }
+
+  .value-card p {
+    text-align: justify;
   }
 
   .contact-buttons {
@@ -365,11 +390,18 @@
 
   .btn {
     width: 200px;
+    max-width: 100%;
   }
 
   .email-link {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-section p {
+    text-align: justify;
   }
 }
 </style>

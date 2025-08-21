@@ -69,6 +69,8 @@ const handleImageLoad = (event: Event) => {
   margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero {
@@ -88,7 +90,7 @@ const handleImageLoad = (event: Event) => {
 
 .name {
   font-size: 3.5rem;
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 1.1;
@@ -96,7 +98,7 @@ const handleImageLoad = (event: Event) => {
 
 .title {
   font-size: 1.5rem;
-  color: #56BB47;
+  color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -114,6 +116,8 @@ const handleImageLoad = (event: Event) => {
   line-height: 1.8;
   color: var(--color-text);
   margin-bottom: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-photo {
@@ -127,8 +131,8 @@ const handleImageLoad = (event: Event) => {
   height: 250px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #AC47BA;
-  box-shadow: 0 10px 30px rgba(172, 71, 186, 0.3);
+  border: 4px solid var(--primary-purple);
+  box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
 }
 
 .profile-image {
@@ -146,7 +150,7 @@ const handleImageLoad = (event: Event) => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #AC47BA, #56BB47);
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-purple-light));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,23 +187,23 @@ const handleImageLoad = (event: Event) => {
 }
 
 .cta-btn.primary {
-  background: #AC47BA;
+  background: var(--primary-purple);
   color: white;
 }
 
 .cta-btn.primary:hover {
-  background: #B85BC5;
+  background: var(--primary-purple-light);
   transform: translateY(-2px);
 }
 
 .cta-btn.secondary {
   background: transparent;
-  color: #56BB47;
-  border: 2px solid #56BB47;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
 }
 
 .cta-btn.secondary:hover {
-  background: #56BB47;
+  background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
 }
@@ -225,7 +229,7 @@ const handleImageLoad = (event: Event) => {
 }
 
 .highlight-card h3 {
-  color: #AC47BA;
+  color: var(--primary-purple);
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
@@ -233,9 +237,15 @@ const handleImageLoad = (event: Event) => {
 .highlight-card p {
   color: var(--color-text);
   line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -246,8 +256,17 @@ const handleImageLoad = (event: Event) => {
     text-align: center;
   }
 
+  .hero-text p {
+    text-align: justify;
+  }
+
   .name {
     font-size: 2.5rem;
+  }
+
+  .description {
+    text-align: justify;
+    max-width: 100%;
   }
 
   .photo-placeholder {
@@ -262,6 +281,15 @@ const handleImageLoad = (event: Event) => {
 
   .cta-btn {
     width: 200px;
+    max-width: 100%;
+  }
+
+  .highlight-card {
+    max-width: 100%;
+  }
+
+  .highlight-card p {
+    text-align: justify;
   }
 }
 </style>
