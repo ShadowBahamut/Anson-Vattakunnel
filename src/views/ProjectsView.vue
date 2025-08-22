@@ -36,6 +36,13 @@
             </div>
             <div class="project-links">
               <a href="#" class="btn primary">Source Code</a>
+              <a href="https://www.news.uct.ac.za/article/-2023-08-04-blockchain-solution-to-contested-elections" target="_blank" rel="noopener noreferrer" class="btn secondary">
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 22h16l-7-4V8l7-4H4l7 4v10l-7 4z"/>
+                  <path d="M11 13h2"/>
+                </svg>
+                UCT News Feature
+              </a>
             </div>
           </div>
           <div class="project-visual">
@@ -483,7 +490,10 @@
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   border: none;
   cursor: pointer;
 }
@@ -524,6 +534,12 @@
   background: var(--primary-purple);
   color: white;
   box-shadow: 0 0 35px rgba(191, 64, 255, 0.6), 0 6px 20px rgba(191, 64, 255, 0.4);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .cta-section {
