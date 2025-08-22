@@ -6,8 +6,8 @@
         <p class="subtitle animate-fade-in-up" style="animation-delay: 0.3s;">A collection of work that showcases my skills and passion</p>
       </header>
 
-      <section class="featured-project animate-fade-in-up" style="animation-delay: 0.6s;">
-        <div class="project-showcase animate-float">
+      <section class="featured-project torquinox-project animate-fade-in-up" style="animation-delay: 0.6s;">
+        <div class="project-showcase">
           <div class="project-info">
             <span class="project-label">Featured Project</span>
             <h2>
@@ -311,7 +311,31 @@
   transition: all 0.3s ease;
 }
 
-.hover-glow:hover {
+/* Inverted styling for Torquinox project */
+.torquinox-project .tech-tag {
+  background: transparent;
+  color: var(--primary-purple);
+  border: 1px solid var(--primary-purple);
+}
+
+.torquinox-project .tech-tag.hover-glow:hover {
+  background: rgba(191, 64, 255, 0.1);
+  color: var(--primary-purple-light);
+  border-color: var(--primary-purple-light);
+  box-shadow: 0 0 25px rgba(191, 64, 255, 0.4), 0 4px 12px rgba(191, 64, 255, 0.2);
+}
+
+/* Add hover glow to entire Torquinox section */
+.torquinox-project:hover .project-showcase {
+  box-shadow: 0 0 60px rgba(191, 64, 255, 0.3), 0 0 100px rgba(191, 64, 255, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.torquinox-project .project-showcase {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover:not(.tech-tag) {
   animation: glow 0.5s ease-in-out;
   transform: translateY(-2px);
   box-shadow: 0 0 30px rgba(191, 64, 255, 0.6), 0 4px 15px rgba(191, 64, 255, 0.4);
@@ -674,8 +698,6 @@
 
 /* Enhanced hover effects for tech tags */
 .tech-tag.hover-glow:hover {
-  animation: glow 0.6s ease-in-out;
-  transform: translateY(-2px) scale(1.05);
   box-shadow: 0 0 25px rgba(191, 64, 255, 0.7), 0 4px 12px rgba(191, 64, 255, 0.4);
 }
 
