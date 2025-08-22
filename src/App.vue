@@ -118,6 +118,89 @@
           </circle>
         </g>
       </svg>
+      
+      <!-- Mobile-optimized PCB traces (portrait mode) -->
+      <svg class="pcb-circuit pcb-circuit-mobile" viewBox="0 0 400 2000" preserveAspectRatio="xMinYMin slice" style="display: none;">
+        <defs>
+          <filter id="mobile-glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <radialGradient id="mobile-dot-gradient">
+            <stop offset="0%" style="stop-color:#bf40ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#bf40ff;stop-opacity:0.3" />
+          </radialGradient>
+        </defs>
+        
+        <!-- Mobile Trace 1 - Primary vertical path -->
+        <g class="trace-group">
+          <path id="mobile-trace1" d="M 50,0 L 50,200 L 100,250 L 150,250 L 200,300 L 200,500 L 150,550 L 100,550 L 50,600 L 50,800 L 100,850 L 150,850 L 200,900 L 200,1100 L 150,1150 L 100,1150 L 50,1200 L 50,1400 L 100,1450 L 150,1450 L 200,1500 L 200,1700 L 150,1750 L 100,1750 L 50,1800 L 50,2000" 
+                stroke="#bf40ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" filter="url(#mobile-glow)"/>
+          <!-- Vias at junctions -->
+          <circle cx="50" cy="200" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="50" cy="200" r="2" fill="#bf40ff" opacity="0.7"/>
+          <circle cx="200" cy="500" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="200" cy="500" r="2" fill="#bf40ff" opacity="0.7"/>
+          <circle cx="50" cy="800" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="50" cy="800" r="2" fill="#bf40ff" opacity="0.7"/>
+          <circle cx="200" cy="1100" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="200" cy="1100" r="2" fill="#bf40ff" opacity="0.7"/>
+          <circle cx="50" cy="1400" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="50" cy="1400" r="2" fill="#bf40ff" opacity="0.7"/>
+          <circle cx="200" cy="1700" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="200" cy="1700" r="2" fill="#bf40ff" opacity="0.7"/>
+          
+          <circle r="6" fill="url(#mobile-dot-gradient)" filter="url(#mobile-glow)">
+            <animateMotion dur="8s" repeatCount="indefinite">
+              <mpath href="#mobile-trace1"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        
+        <!-- Mobile Trace 2 - Secondary path -->
+        <g class="trace-group">
+          <path id="mobile-trace2" d="M 350,0 L 350,150 L 300,200 L 250,200 L 200,250 L 200,450 L 250,500 L 300,500 L 350,550 L 350,750 L 300,800 L 250,800 L 200,850 L 200,1050 L 250,1100 L 300,1100 L 350,1150 L 350,1350 L 300,1400 L 250,1400 L 200,1450 L 200,1650 L 250,1700 L 300,1700 L 350,1750 L 350,1950 L 300,2000" 
+                stroke="#d966ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3" filter="url(#mobile-glow)"/>
+          <!-- Vias -->
+          <circle cx="350" cy="100" r="4" fill="none" stroke="#d966ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="350" cy="100" r="2" fill="#d966ff" opacity="0.7"/>
+          <circle cx="200" cy="350" r="4" fill="none" stroke="#d966ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="200" cy="350" r="2" fill="#d966ff" opacity="0.7"/>
+          <circle cx="350" cy="600" r="4" fill="none" stroke="#d966ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="350" cy="600" r="2" fill="#d966ff" opacity="0.7"/>
+          
+          <circle r="6" fill="url(#mobile-dot-gradient)" filter="url(#mobile-glow)">
+            <animateMotion dur="10s" repeatCount="indefinite">
+              <mpath href="#mobile-trace2"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        
+        <!-- Mobile Trace 3 - Zigzag path -->
+        <g class="trace-group">
+          <path id="mobile-trace3" d="M 150,0 L 150,180 L 200,230 L 250,230 L 300,280 L 300,480 L 250,530 L 200,530 L 150,580 L 150,780 L 100,830 L 50,830 L 0,880 L 0,1080 L 50,1130 L 100,1130 L 150,1180 L 150,1380 L 200,1430 L 250,1430 L 300,1480 L 300,1680 L 250,1730 L 200,1730 L 150,1780 L 150,1980 L 100,2000" 
+                stroke="#e699ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.25" filter="url(#mobile-glow)"/>
+          <!-- Vias -->
+          <circle cx="150" cy="120" r="4" fill="none" stroke="#e699ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="150" cy="120" r="2" fill="#e699ff" opacity="0.7"/>
+          <circle cx="300" cy="320" r="4" fill="none" stroke="#e699ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="300" cy="320" r="2" fill="#e699ff" opacity="0.7"/>
+          <circle cx="150" cy="520" r="4" fill="none" stroke="#e699ff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="150" cy="520" r="2" fill="#e699ff" opacity="0.7"/>
+          
+          <circle r="6" fill="url(#mobile-dot-gradient)" filter="url(#mobile-glow)">
+            <animateMotion dur="12s" repeatCount="indefinite">
+              <mpath href="#mobile-trace3"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg>
     </div>
     <header class="app-header">
       <nav class="main-nav">
@@ -250,6 +333,13 @@ const closeMobileMenu = () => {
   height: 100%;
   opacity: 0.4;
   animation: pulse-circuit 20s ease-in-out infinite;
+}
+
+.pcb-circuit-mobile {
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
 }
 
 @keyframes pulse-circuit {
@@ -578,6 +668,12 @@ const closeMobileMenu = () => {
 
   .pcb-circuit {
     opacity: 0.2;
+    display: none;
+  }
+
+  .pcb-circuit-mobile {
+    display: block;
+    opacity: 0.25;
   }
 
   .nav-actions {
@@ -667,6 +763,15 @@ const closeMobileMenu = () => {
 }
 
 @media (max-width: 480px) {
+  .pcb-circuit {
+    display: none !important;
+  }
+
+  .pcb-circuit-mobile {
+    display: block !important;
+    opacity: 0.2;
+  }
+
   .main-nav {
     padding: 0 0.75rem;
     height: 56px;

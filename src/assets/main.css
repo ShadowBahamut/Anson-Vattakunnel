@@ -25,3 +25,30 @@ a,
   color: var(--primary-purple);
 }
 
+@media (max-width: 768px) {
+  .project-showcase {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-info {
+    text-align: center;
+  }
+
+  .project-visual {
+    display: none !important;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+}
+

@@ -610,7 +610,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   }
 
   .container {
-    padding: 0 1.5rem;
+    padding: 0 2.5rem;
   }
 
   .projects-header {
@@ -708,7 +708,8 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   
   .grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
+    margin: 0 1rem;
   }
 
   .project-card {
@@ -851,7 +852,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   .projects-header {
@@ -876,6 +877,12 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     gap: 1.5rem;
   }
 
+  .blockchain-mockup {
+    min-height: 240px;
+    padding: 1rem 0.5rem;
+    overflow: visible;
+  }
+
   .project-info {
     order: 1;
   }
@@ -888,12 +895,12 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   .blockchain-mockup {
     width: 100%;
     height: auto;
-    min-height: 250px;
-    padding: 1rem;
+    min-height: 280px;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .project-info h2 {
@@ -923,14 +930,17 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
 
   .blockchain-visual {
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.8rem;
     align-items: center;
+    width: 100%;
+    max-width: 200px;
   }
 
   .block {
-    width: 110px;
-    height: 65px;
+    width: 120px;
+    height: 70px;
     font-size: 0.8rem;
+    flex-shrink: 0;
   }
 
   .block-header {
@@ -955,7 +965,8 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   }
   
   .grid {
-    gap: 2rem;
+    gap: 2.5rem;
+    margin: 0 0.5rem;
   }
 
   .project-card {
