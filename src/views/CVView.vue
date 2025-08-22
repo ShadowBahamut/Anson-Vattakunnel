@@ -32,7 +32,7 @@
                   <line x1="8" y1="2" x2="8" y2="6"/>
                   <line x1="3" y1="10" x2="21" y2="10"/>
                 </svg>
-                Updated: January 2025
+                Updated: August 2025
               </span>
               <span>
                 <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -58,7 +58,7 @@
 
         <div class="cv-actions">
           <div class="action-buttons">
-            <a href="/cv.pdf" download class="btn primary large animate-pulse">
+            <a href="/CV_Anson Benjamin Vattakunnel.pdf" download class="btn primary large animate-pulse">
               <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7,10 12,15 17,10"/>
@@ -66,7 +66,7 @@
               </svg>
               Download PDF
             </a>
-            <a href="/cv.pdf" target="_blank" class="btn secondary large">
+            <a href="/CV_Anson Benjamin Vattakunnel.pdf" target="_blank" class="btn secondary large">
               <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                 <circle cx="12" cy="12" r="3"/>

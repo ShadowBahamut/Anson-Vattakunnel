@@ -120,7 +120,6 @@
                 </svg>
                 View Demo
               </a>
-              <a href="https://github.com/ShadowBahamut/micromouse" target="_blank" rel="noopener noreferrer" class="btn small">View on GitHub</a>
             </div>
           </div>
 
