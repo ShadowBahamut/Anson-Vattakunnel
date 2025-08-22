@@ -216,10 +216,9 @@
 
 <style scoped>
 .projects {
-  padding: 2rem 0;
+  padding: 3rem 0;
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -228,7 +227,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 5rem;
   box-sizing: border-box;
 }
 
@@ -398,7 +397,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  gap: 4rem;
   margin-bottom: 4rem;
 }
 
@@ -547,7 +546,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 3rem;
   }
 
   .projects-header h1 {
@@ -685,5 +684,15 @@
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 0 50px rgba(191, 64, 255, 0.6), 0 20px 50px rgba(191, 64, 255, 0.3);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .grid {
+    gap: 2.5rem;
+  }
 }
 </style>
