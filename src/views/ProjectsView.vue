@@ -585,42 +585,109 @@
 }
 
 @media (max-width: 768px) {
+  .projects {
+    padding: 2rem 0;
+  }
+
   .container {
-    padding: 0 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .projects-header {
+    margin-bottom: 3rem;
+    padding: 2rem 1.5rem;
   }
 
   .projects-header h1 {
     font-size: 2.5rem;
   }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .featured-project {
+    margin-bottom: 4rem;
+  }
+  
+  .project-showcase {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
   
   .project-info h2 {
     font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .project-description {
     text-align: justify;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .tech-stack {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .project-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    width: auto;
+    min-width: 140px;
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
   
   .grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .project-card {
     max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.2rem;
   }
 
   .card-description {
     text-align: justify;
+    font-size: 0.95rem;
+  }
+
+  .btn.small {
+    font-size: 0.85rem;
+    padding: 6px 12px;
   }
   
+  .cta-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
-  }
-  
-  .btn {
-    width: 200px;
-    max-width: 100%;
+    gap: 0.75rem;
   }
 
   .cta-content p {
@@ -725,12 +792,104 @@
 }
 
 @media (max-width: 480px) {
+  .projects {
+    padding: 1.5rem 0;
+  }
+
   .container {
-    padding: 0 2rem;
+    padding: 0 1rem;
+  }
+
+  .projects-header {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .featured-project {
+    margin-bottom: 3rem;
+  }
+
+  .project-showcase {
+    padding: 1.5rem 1rem;
+  }
+
+  .project-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .btn {
+    min-width: 120px;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .btn-icon {
+    width: 16px;
+    height: 16px;
   }
   
   .grid {
-    gap: 2.5rem;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .project-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .project-type {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+
+  .btn.small {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    min-width: 100px;
+  }
+
+  .cta-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
   }
 }
 </style>

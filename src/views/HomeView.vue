@@ -385,15 +385,13 @@ const handleImageLoad = (event: Event) => {
 @media (max-width: 768px) {
   .home {
     padding: 1rem;
+    max-width: 100%;
   }
 
   .hero {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 20px;
-  }
-
-  .pcb-circuit {
-    opacity: 0.2;
+    margin-bottom: 3rem;
   }
 
   .hero-content {
@@ -412,34 +410,119 @@ const handleImageLoad = (event: Event) => {
 
   .name {
     font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
   }
 
   .description {
     text-align: justify;
     max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
   }
 
   .photo-placeholder {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 
   .cta-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
 
   .cta-btn {
-    width: 200px;
+    width: 220px;
     max-width: 100%;
+    padding: 12px 24px;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
   }
 
   .highlight-card {
     max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.2rem;
   }
 
   .highlight-card p {
     text-align: justify;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 0.75rem;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .name {
+    font-size: 2rem;
+    white-space: normal;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .photo-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.95rem;
+  }
+
+  .highlight-card {
+    padding: 1.25rem;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .highlight-icon {
+    width: 20px;
+    height: 20px;
   }
 }
 </style>

@@ -409,25 +409,57 @@
 }
 
 @media (max-width: 768px) {
+  .cv-view {
+    padding: 1.5rem 0;
+  }
+
   .container {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+  }
+
+  .cv-header {
+    margin-bottom: 2.5rem;
   }
 
   .cv-header h1 {
     font-size: 2.5rem;
   }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
   
   .cv-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
   }
 
   .preview-card {
     max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .preview-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .document-type {
+    font-size: 1rem;
   }
 
   .document-description {
     text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .document-meta {
+    font-size: 0.85rem;
+  }
+
+  .cv-actions {
+    gap: 2rem;
   }
   
   .action-buttons {
@@ -437,20 +469,149 @@
   .btn.large {
     width: 250px;
     max-width: 100%;
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+
+  .quick-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .info-list li {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .alternative-actions {
+    padding: 2rem 1.5rem;
+  }
+
+  .alt-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .alt-content p {
+    text-align: justify;
+    font-size: 1rem;
   }
   
   .alt-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
   
   .btn.outline {
     width: 200px;
     max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-view {
+    padding: 1rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .cv-header {
+    margin-bottom: 2rem;
+  }
+
+  .cv-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .cv-content {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .preview-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .document-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .preview-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .document-type {
+    font-size: 0.95rem;
+  }
+
+  .document-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .document-meta {
+    font-size: 0.8rem;
+  }
+
+  .cv-actions {
+    gap: 1.5rem;
+  }
+
+  .btn.large {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
+
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .quick-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-list {
+    gap: 0.75rem;
+  }
+
+  .info-list li {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .info-icon {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+  }
+
+  .alternative-actions {
+    padding: 1.5rem 1rem;
+  }
+
+  .alt-content h2 {
+    font-size: 1.5rem;
   }
 
   .alt-content p {
-    text-align: justify;
+    font-size: 0.95rem;
+  }
+
+  .btn.outline {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.9rem;
+    padding: 12px 20px;
   }
 }
 

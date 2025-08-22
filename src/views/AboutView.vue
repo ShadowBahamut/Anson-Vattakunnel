@@ -439,45 +439,108 @@
 }
 
 @media (max-width: 768px) {
+  .about {
+    padding: 1.5rem 0;
+  }
+
   .container {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+  }
+
+  .about-header {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .about-header h1 {
     font-size: 2.5rem;
   }
 
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about-content {
+    gap: 3rem;
+  }
+
   .profile-section {
     flex-direction: column;
     text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .profile-text h2 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .profile-text p {
     text-align: justify;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .skills-section h2,
+  .values-section h2 {
+    font-size: 1.8rem;
   }
 
   .skills-grid,
   .values-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .skill-category,
   .value-card {
     max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .skill-category h3,
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-category li {
+    font-size: 0.95rem;
   }
 
   .value-card p {
     text-align: justify;
+    font-size: 0.95rem;
+  }
+
+  .value-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section p {
+    text-align: justify;
+    font-size: 1rem;
   }
 
   .contact-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
 
   .btn {
     width: 200px;
     max-width: 100%;
+    font-size: 0.95rem;
   }
 
   .email-link {
@@ -486,9 +549,103 @@
     max-width: 100%;
     box-sizing: border-box;
   }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .about-header {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    gap: 2.5rem;
+  }
+
+  .profile-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .profile-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .skills-section h2,
+  .values-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .skill-category,
+  .value-card {
+    padding: 1.25rem;
+  }
+
+  .skill-category h3,
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-category li {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+  }
+
+  .value-card p {
+    font-size: 0.9rem;
+  }
+
+  .value-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
 
   .contact-section p {
-    text-align: justify;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+
+  .email-link {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.25rem;
+  }
+
+  .email-link svg {
+    width: 20px;
+    height: 20px;
   }
 }
 

@@ -557,6 +557,7 @@ const closeMobileMenu = () => {
 @media (max-width: 768px) {
   .main-nav {
     padding: 0 1rem;
+    height: 60px;
   }
 
   .desktop-only {
@@ -568,7 +569,29 @@ const closeMobileMenu = () => {
   }
 
   .app-main {
-    padding-top: 70px;
+    padding-top: 60px;
+  }
+
+  .brand-link {
+    font-size: 1.5rem;
+  }
+
+  .pcb-circuit {
+    opacity: 0.2;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu-btn {
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -644,12 +667,46 @@ const closeMobileMenu = () => {
 }
 
 @media (max-width: 480px) {
+  .main-nav {
+    padding: 0 0.75rem;
+    height: 56px;
+  }
+
+  .app-main {
+    padding-top: 56px;
+  }
+
   .nav-brand {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .brand-link {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobile-menu-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .theme-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mobile-nav-link {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .mobile-social-btn {
+    width: 40px;
+    height: 40px;
   }
 }
 </style>
