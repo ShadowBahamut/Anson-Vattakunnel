@@ -644,6 +644,40 @@
     flex-wrap: wrap;
   }
 
+  /* Fix blockchain visual for tablet and mobile */
+  .blockchain-visual {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .block {
+    width: 130px;
+    height: 75px;
+    font-size: 0.9rem;
+  }
+
+  .block-header {
+    font-size: 0.8rem;
+    padding: 0.35rem;
+    text-align: center;
+  }
+
+  .block-content {
+    padding: 0.3rem;
+  }
+
+  .block-content svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .chain-link {
+    font-size: 1rem;
+    transform: rotate(90deg);
+    margin: 0.1rem 0;
+  }
+
   .btn {
     width: auto;
     min-width: 140px;
@@ -819,6 +853,27 @@
 
   .project-showcase {
     padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .project-info {
+    order: 1;
+  }
+
+  .project-visual {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  .blockchain-mockup {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .project-info h2 {
@@ -844,6 +899,39 @@
   .btn-icon {
     width: 16px;
     height: 16px;
+  }
+
+  .blockchain-visual {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  .block {
+    width: 110px;
+    height: 65px;
+    font-size: 0.8rem;
+  }
+
+  .block-header {
+    font-size: 0.75rem;
+    padding: 0.3rem;
+    text-align: center;
+  }
+
+  .block-content {
+    padding: 0.25rem;
+  }
+
+  .block-content svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .chain-link {
+    font-size: 0.9rem;
+    transform: rotate(90deg);
+    margin: 0.1rem 0;
   }
   
   .grid {

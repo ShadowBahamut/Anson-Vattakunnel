@@ -78,7 +78,7 @@
 </template>
 
 <script setup lang="ts">
-import profilePhoto from '@/assets/profile-photo.jpg'
+import profilePhoto from '@/assets/profile-photo-compressed.jpg'
 
 // Handle image loading error
 const handleImageError = (event: Event) => {
@@ -122,7 +122,7 @@ const handleImageLoad = (event: Event) => {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr min(300px, 40vw);
   gap: 4rem;
   align-items: center;
   position: relative;
@@ -170,6 +170,8 @@ const handleImageLoad = (event: Event) => {
 .hero-photo {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-width: 0; /* Prevent flex overflow */
 }
 
 .photo-placeholder {
@@ -180,6 +182,9 @@ const handleImageLoad = (event: Event) => {
   overflow: hidden;
   border: 4px solid var(--primary-purple);
   box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+  flex-shrink: 1;
+  min-width: 150px;
+  min-height: 150px;
 }
 
 .profile-image {
@@ -380,6 +385,19 @@ const handleImageLoad = (event: Event) => {
   animation: fadeInUp 0.8s ease-out forwards; 
   animation-delay: 0.6s; 
   opacity: 0;
+}
+
+/* Split screen / narrow desktop handling */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .hero-content {
+    grid-template-columns: 1fr min(250px, 35vw);
+    gap: 2rem;
+  }
+
+  .photo-placeholder {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 768px) {
