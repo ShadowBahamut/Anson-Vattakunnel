@@ -1,5 +1,5 @@
 <template>
-  <div class="about animate-gradient">
+  <div class="about">
     <div class="container">
       <header class="about-header">
         <h1 class="animate-fade-in-up">About Me</h1>
@@ -152,6 +152,15 @@
 .about-header {
   text-align: center;
   margin-bottom: 3rem;
+  padding: 3rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, 
+    rgba(191, 64, 255, 0.03) 0%, 
+    rgba(217, 102, 255, 0.05) 50%, 
+    rgba(191, 64, 255, 0.03) 100%);
+  border: 1px solid rgba(191, 64, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(191, 64, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .about-header h1 {
@@ -159,6 +168,7 @@
   color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 700;
+  text-shadow: 0 0 20px rgba(191, 64, 255, 0.5);
 }
 
 .subtitle {
@@ -177,6 +187,15 @@
   display: flex;
   align-items: center;
   gap: 3rem;
+  padding: 3rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, 
+    rgba(191, 64, 255, 0.02) 0%, 
+    rgba(217, 102, 255, 0.04) 50%, 
+    rgba(191, 64, 255, 0.02) 100%);
+  border: 1px solid rgba(191, 64, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.04);
+  backdrop-filter: blur(8px);
 }
 
 .profile-text h2 {
@@ -228,8 +247,17 @@
 .skill-category {
   background: var(--color-background-soft);
   padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  border: 1px solid rgba(191, 64, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.skill-category:hover {
+  transform: translateY(-4px);
+  border-color: rgba(191, 64, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.15);
 }
 
 .skill-category h3 {
@@ -262,14 +290,18 @@
 .value-card {
   background: var(--color-background-soft);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 20px;
   text-align: center;
-  border: 1px solid var(--color-border);
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(191, 64, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .value-card:hover {
   transform: translateY(-4px);
+  border-color: rgba(191, 64, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.15);
 }
 
 .value-icon {
@@ -307,6 +339,15 @@
 
 .contact-section {
   text-align: center;
+  padding: 3rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, 
+    rgba(191, 64, 255, 0.02) 0%, 
+    rgba(217, 102, 255, 0.04) 50%, 
+    rgba(191, 64, 255, 0.02) 100%);
+  border: 1px solid rgba(191, 64, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.04);
+  backdrop-filter: blur(8px);
 }
 
 .contact-section h2 {
@@ -340,13 +381,14 @@
   font-size: 1.1rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(191, 64, 255, 0.2);
 }
 
 .email-link:hover {
   background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+  box-shadow: 0 6px 20px rgba(191, 64, 255, 0.4);
 }
 
 .email-link svg {
@@ -363,12 +405,13 @@
 }
 
 .btn {
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   display: inline-block;
+  box-shadow: 0 4px 15px rgba(191, 64, 255, 0.25);
 }
 
 .btn.primary {
