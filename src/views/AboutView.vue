@@ -11,9 +11,10 @@
           <div class="profile-text">
             <h2>
               Hello, I'm Anson!
-              <svg class="greeting-icon animate-wave" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
-                <path d="M15 5l4 4"/>
+              <svg class="greeting-icon animate-wave" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+                <path d="M15 5l4 4" />
               </svg>
             </h2>
             <p class="animate-fade-in-up" style="animation-delay: 0.9s;">
@@ -37,31 +38,36 @@
             <div class="skill-category">
               <h3>Engineering & Hardware</h3>
               <ul>
-                <li>Embedded Systems</li>
-                <li>C/C++ Programming</li>
-                <li>Microcontrollers</li>
-                <li>Circuit Design</li>
-                <li>Robotics (Micromouse)</li>
+                <li>Embedded Hardware Design</li>
+                <li>Microcontrollers & Real-Time Systems</li>
+                <li>Control & Instrumentation</li>
+                <li>Analogue & Digital Circuit Design</li>
+                <li>Electromagnetics & Power Systems</li>
+                <li>Autonomous Robotics & Pathfinding</li>
+                <li>Sensor Integration & Real-Time Data Processing</li>
               </ul>
             </div>
             <div class="skill-category">
               <h3>Software & Systems</h3>
               <ul>
-                <li>Linux Kernel Development</li>
-                <li>Python / JavaScript</li>
-                <li>Blockchain (Algorand)</li>
-                <li>System Programming</li>
-                <li>FOSS Development</li>
+                <li>C / C++ & Embedded Programming</li>
+                <li>Control System Design (PID, State-Space)</li>
+                <li>Algorithms & Data Structures</li>
+                <li>Blockchain Development & Cryptography</li>
+                <li>Web Development (Vue 3, TypeScript, Responsive Design)</li>
+                <li>Linux Kernel Development & FOSS Contributions</li>
               </ul>
             </div>
             <div class="skill-category">
               <h3>Tools & Technologies</h3>
               <ul>
+                <li>MATLAB / Simulink & LTSpice</li>
+                <li>STM32CubeIDE & GNU Toolchains</li>
                 <li>Git & Version Control</li>
-                <li>Linux Administration</li>
-                <li>Privacy Tools</li>
-                <li>Open Source Contribution</li>
-                <li>Technical Documentation</li>
+                <li>Arduino / Raspberry Pi</li>
+                <li>LaTeX & Technical Documentation</li>
+                <li>Hyprland & Linux Customization</li>
+                <li>Animation & UI/UX Design for Web & Desktop</li>
               </ul>
             </div>
           </div>
@@ -71,29 +77,32 @@
           <h2>What Drives Me</h2>
           <div class="values-grid stagger-children">
             <div class="value-card animate-float hover-lift">
-              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v12"/>
-                <path d="M6 12h12"/>
-                <path d="M8 8l8 8"/>
-                <path d="M16 8l-8 8"/>
+              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v12" />
+                <path d="M6 12h12" />
+                <path d="M8 8l8 8" />
+                <path d="M16 8l-8 8" />
               </svg>
               <h3>Open Source</h3>
               <p>Contributing to FOSS projects and the Linux kernel, believing in the power of community-driven
                 development.</p>
             </div>
             <div class="value-card animate-float hover-lift">
-              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L3 7l9 5 9-5-9-5z"/>
-                <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/>
-                <circle cx="12" cy="13" r="3"/>
+              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 2L3 7l9 5 9-5-9-5z" />
+                <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7" />
+                <circle cx="12" cy="13" r="3" />
               </svg>
               <h3>Privacy & Security</h3>
               <p>Building technology that respects user privacy and implements security by design principles.</p>
             </div>
             <div class="value-card animate-float hover-lift">
-              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+              <svg class="value-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" />
               </svg>
               <h3>Innovation</h3>
               <p>From blockchain voting systems to autonomous robots, I love exploring cutting-edge technologies.</p>
@@ -154,10 +163,10 @@
   margin-bottom: 3rem;
   padding: 3rem;
   border-radius: 24px;
-  background: linear-gradient(135deg, 
-    rgba(191, 64, 255, 0.03) 0%, 
-    rgba(217, 102, 255, 0.05) 50%, 
-    rgba(191, 64, 255, 0.03) 100%);
+  background: linear-gradient(135deg,
+      rgba(191, 64, 255, 0.03) 0%,
+      rgba(217, 102, 255, 0.05) 50%,
+      rgba(191, 64, 255, 0.03) 100%);
   border: 1px solid rgba(191, 64, 255, 0.1);
   box-shadow: 0 10px 40px rgba(191, 64, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -189,10 +198,10 @@
   gap: 3rem;
   padding: 3rem;
   border-radius: 24px;
-  background: linear-gradient(135deg, 
-    rgba(191, 64, 255, 0.02) 0%, 
-    rgba(217, 102, 255, 0.04) 50%, 
-    rgba(191, 64, 255, 0.02) 100%);
+  background: linear-gradient(135deg,
+      rgba(191, 64, 255, 0.02) 0%,
+      rgba(217, 102, 255, 0.04) 50%,
+      rgba(191, 64, 255, 0.02) 100%);
   border: 1px solid rgba(191, 64, 255, 0.08);
   box-shadow: 0 8px 30px rgba(191, 64, 255, 0.04);
   backdrop-filter: blur(8px);
@@ -216,9 +225,19 @@
 }
 
 @keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(20deg); }
-  75% { transform: rotate(-10deg); }
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
 }
 
 .profile-text p {
@@ -341,10 +360,10 @@
   text-align: center;
   padding: 3rem;
   border-radius: 24px;
-  background: linear-gradient(135deg, 
-    rgba(191, 64, 255, 0.02) 0%, 
-    rgba(217, 102, 255, 0.04) 50%, 
-    rgba(191, 64, 255, 0.02) 100%);
+  background: linear-gradient(135deg,
+      rgba(191, 64, 255, 0.02) 0%,
+      rgba(217, 102, 255, 0.04) 50%,
+      rgba(191, 64, 255, 0.02) 100%);
   border: 1px solid rgba(191, 64, 255, 0.08);
   box-shadow: 0 8px 30px rgba(191, 64, 255, 0.04);
   backdrop-filter: blur(8px);
@@ -655,6 +674,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -662,14 +682,29 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes slideInLeft {
@@ -677,6 +712,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -705,19 +741,19 @@
 }
 
 /* Enhanced stagger animations */
-.stagger-children > *:nth-child(1) {
+.stagger-children>*:nth-child(1) {
   animation: slideInLeft 0.8s ease-out forwards;
   animation-delay: 0.2s;
   opacity: 0;
 }
 
-.stagger-children > *:nth-child(2) {
+.stagger-children>*:nth-child(2) {
   animation: slideInLeft 0.8s ease-out forwards;
   animation-delay: 0.4s;
   opacity: 0;
 }
 
-.stagger-children > *:nth-child(3) {
+.stagger-children>*:nth-child(3) {
   animation: slideInLeft 0.8s ease-out forwards;
   animation-delay: 0.6s;
   opacity: 0;

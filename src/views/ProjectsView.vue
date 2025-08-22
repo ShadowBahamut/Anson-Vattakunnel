@@ -3,7 +3,8 @@
     <div class="container">
       <header class="projects-header">
         <h1 class="animate-fade-in-up">My Projects</h1>
-        <p class="subtitle animate-fade-in-up" style="animation-delay: 0.3s;">A collection of work that showcases my skills and passion</p>
+        <p class="subtitle animate-fade-in-up" style="animation-delay: 0.3s;">A collection of work that showcases my
+          skills and passion</p>
       </header>
 
       <section class="featured-project torquinox-project animate-fade-in-up" style="animation-delay: 0.6s;">
@@ -11,20 +12,22 @@
           <div class="project-info">
             <span class="project-label">Featured Project</span>
             <h2>
-              <svg class="project-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                <polyline points="7.5,4.21 12,6.81 16.5,4.21"/>
-                <polyline points="7.5,19.79 7.5,14.6 3,12"/>
-                <polyline points="21,12 16.5,14.6 16.5,19.79"/>
-                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              <svg class="project-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="7.5,4.21 12,6.81 16.5,4.21" />
+                <polyline points="7.5,19.79 7.5,14.6 3,12" />
+                <polyline points="21,12 16.5,14.6 16.5,19.79" />
+                <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
               </svg>
               Torquinox
             </h2>
             <p class="project-description">
-              A secure, decentralized blockchain-based voting system built on the Algorand network. 
-              Torquinox ensures transparent, tamper-proof elections with cryptographic verification 
-              and immutable vote recording. The system provides real-time vote tracking while 
+              A secure, decentralized blockchain-based voting system built on the Algorand network.
+              Torquinox ensures transparent, tamper-proof elections with cryptographic verification
+              and immutable vote recording. The system provides real-time vote tracking while
               maintaining voter privacy through advanced cryptographic techniques.
             </p>
             <div class="tech-stack">
@@ -35,10 +38,12 @@
               <span class="tech-tag hover-glow">Cryptography</span>
             </div>
             <div class="project-links">
-              <a href="https://www.news.uct.ac.za/article/-2023-08-04-blockchain-solution-to-contested-elections" target="_blank" rel="noopener noreferrer" class="btn primary">
-                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 22h16l-7-4V8l7-4H4l7 4v10l-7 4z"/>
-                  <path d="M11 13h2"/>
+              <a href="https://www.news.uct.ac.za/article/-2023-08-04-blockchain-solution-to-contested-elections"
+                target="_blank" rel="noopener noreferrer" class="btn primary">
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 22h16l-7-4V8l7-4H4l7 4v10l-7 4z" />
+                  <path d="M11 13h2" />
                 </svg>
                 UCT News Feature
               </a>
@@ -51,8 +56,9 @@
                   <div class="block-header">Block 1</div>
                   <div class="block-content">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                      <circle cx="12" cy="12" r="3"/>
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <circle cx="12" cy="12" r="3" />
                     </svg>
                   </div>
                 </div>
@@ -61,8 +67,9 @@
                   <div class="block-header">Block 2</div>
                   <div class="block-content">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                      <circle cx="12" cy="12" r="3"/>
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <circle cx="12" cy="12" r="3" />
                     </svg>
                   </div>
                 </div>
@@ -71,8 +78,9 @@
                   <div class="block-header">Block 3</div>
                   <div class="block-content">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                      <circle cx="12" cy="12" r="3"/>
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <circle cx="12" cy="12" r="3" />
                     </svg>
                   </div>
                 </div>
@@ -84,28 +92,28 @@
 
       <section class="projects-grid">
         <h2 class="section-title">Other Projects</h2>
-        
+
         <div class="grid stagger-children">
           <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
-                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                  <circle cx="12" cy="5" r="2"/>
-                  <path d="M12 7v4"/>
-                  <line x1="8" y1="16" x2="16" y2="16"/>
-                  <line x1="8" y1="20" x2="16" y2="20"/>
-                  <circle cx="9" cy="14" r="1"/>
-                  <circle cx="15" cy="14" r="1"/>
+                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v4" />
+                  <line x1="8" y1="16" x2="16" y2="16" />
+                  <line x1="8" y1="20" x2="16" y2="20" />
+                  <circle cx="9" cy="14" r="1" />
+                  <circle cx="15" cy="14" r="1" />
                 </svg>
                 Micromouse Robot
               </h3>
               <span class="project-type">Robotics</span>
             </div>
             <p class="card-description">
-              An autonomous maze-solving robot featuring custom pathfinding algorithms, 
-              real-time sensor processing, and optimized navigation. Complete with 
-              working code and demonstration video.
+              An autonomous maze-solving robot featuring custom pathfinding algorithms,
+              real-time sensor processing, and optimized navigation.
             </p>
             <div class="tech-stack">
               <span class="tech-tag hover-glow">C++</span>
@@ -115,8 +123,9 @@
             </div>
             <div class="card-footer">
               <a :href="micromouseVideo" target="_blank" rel="noopener noreferrer" class="btn small primary">
-                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3" />
                 </svg>
                 View Demo
               </a>
@@ -126,20 +135,21 @@
           <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
-                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
-                  <path d="M6 8l4 4-4 4"/>
-                  <path d="M12 12h6"/>
+                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                  <path d="M6 8l4 4-4 4" />
+                  <path d="M12 12h6" />
                 </svg>
                 Portfolio Website
               </h3>
               <span class="project-type">Frontend</span>
             </div>
             <p class="card-description">
-              This responsive portfolio website built with Vue 3 and TypeScript. 
-              Features custom purple/green theming, smooth animations, and 
+              This responsive portfolio website built with Vue 3 and TypeScript.
+              Features custom purple theming, smooth animations, and
               modern web development practices.
             </p>
             <div class="tech-stack">
@@ -149,25 +159,29 @@
               <span class="tech-tag hover-glow">CSS3</span>
             </div>
             <div class="card-footer">
-              <a href="https://github.com/ShadowBahamut/Anson-Vattakunnel" target="_blank" rel="noopener noreferrer" class="btn small">Source Code</a>
+              <a href="https://github.com/ShadowBahamut/Anson-Vattakunnel" target="_blank" rel="noopener noreferrer"
+                class="btn small">Source Code</a>
             </div>
           </div>
 
           <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
-                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                  <circle cx="12" cy="16" r="1"/>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                  <path d="M8 2l2 2 2-2 2 2"/>
+                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <circle cx="12" cy="16" r="1" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <path d="M8 2l2 2 2-2 2 2" />
                 </svg>
                 Hyprlock Animated
               </h3>
               <span class="project-type">Open Source</span>
             </div>
             <p class="card-description">
-              Forked and enhanced Hyprlock with custom animations support, enabling live wallpapers as lock screens. Features smooth transitions, video backgrounds, and dynamic effects for a modern lock screen experience on Hyprland.
+              Forked and enhanced Hyprlock with custom animations support, enabling live wallpapers as lock screens.
+              Features smooth transitions, video backgrounds, and dynamic effects for a modern lock screen experience on
+              Hyprland.
             </p>
             <div class="tech-stack">
               <span class="tech-tag hover-glow">C++</span>
@@ -176,26 +190,28 @@
               <span class="tech-tag hover-glow">Animation</span>
             </div>
             <div class="card-footer">
-              <a href="https://github.com/ShadowBahamut/hyprlock-animated" target="_blank" rel="noopener noreferrer" class="btn small">View Fork</a>
+              <a href="https://github.com/ShadowBahamut/hyprlock-animated" target="_blank" rel="noopener noreferrer"
+                class="btn small">View Fork</a>
             </div>
           </div>
 
           <div class="project-card hover-lift">
             <div class="card-header">
               <h3>
-                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 6v12"/>
-                  <path d="M6 12h12"/>
-                  <path d="M8 8l8 8"/>
-                  <path d="M16 8l-8 8"/>
+                <svg class="project-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v12" />
+                  <path d="M6 12h12" />
+                  <path d="M8 8l8 8" />
+                  <path d="M16 8l-8 8" />
                 </svg>
                 Linux Kernel Contributions
               </h3>
               <span class="project-type">Open Source</span>
             </div>
             <p class="card-description">
-              Contributing patches and improvements to the Linux kernel, focusing on 
+              Contributing patches and improvements to the Linux kernel, focusing on
               system optimization and bug fixes. Part of my commitment to FOSS development.
             </p>
             <div class="tech-stack">
@@ -598,7 +614,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     gap: 2rem;
     text-align: center;
   }
-  
+
   .project-visual {
     order: -1;
   }
@@ -629,14 +645,14 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   .featured-project {
     margin-bottom: 4rem;
   }
-  
+
   .project-showcase {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
     padding: 2rem 1.5rem;
   }
-  
+
   .project-info h2 {
     font-size: 2rem;
     flex-direction: column;
@@ -705,7 +721,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     font-size: 0.9rem;
     padding: 10px 20px;
   }
-  
+
   .grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -730,7 +746,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     font-size: 0.85rem;
     padding: 6px 12px;
   }
-  
+
   .cta-section {
     padding: 2rem 1.5rem;
   }
@@ -756,6 +772,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -763,8 +780,15 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes scaleIn {
@@ -772,6 +796,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -779,15 +804,17 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
 }
 
 @keyframes glow {
-  0% { 
+  0% {
     box-shadow: 0 0 5px rgba(147, 51, 234, 0.3);
     transform: translateY(0);
   }
-  50% { 
+
+  50% {
     box-shadow: 0 0 20px rgba(147, 51, 234, 0.6), 0 0 30px rgba(147, 51, 234, 0.4);
     transform: translateY(-3px);
   }
-  100% { 
+
+  100% {
     box-shadow: 0 0 5px rgba(147, 51, 234, 0.3);
     transform: translateY(0);
   }
@@ -813,24 +840,27 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
 }
 
 /* Enhanced stagger animation */
-.stagger-children > *:nth-child(1) { 
-  animation: fadeInUp 0.8s ease-out forwards; 
-  animation-delay: 0.2s; 
+.stagger-children>*:nth-child(1) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
   opacity: 0;
 }
-.stagger-children > *:nth-child(2) { 
-  animation: fadeInUp 0.8s ease-out forwards; 
-  animation-delay: 0.4s; 
+
+.stagger-children>*:nth-child(2) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
   opacity: 0;
 }
-.stagger-children > *:nth-child(3) { 
-  animation: fadeInUp 0.8s ease-out forwards; 
-  animation-delay: 0.6s; 
+
+.stagger-children>*:nth-child(3) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
   opacity: 0;
 }
-.stagger-children > *:nth-child(4) { 
-  animation: fadeInUp 0.8s ease-out forwards; 
-  animation-delay: 0.8s; 
+
+.stagger-children>*:nth-child(4) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.8s;
   opacity: 0;
 }
 
@@ -963,7 +993,7 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     transform: rotate(90deg);
     margin: 0.1rem 0;
   }
-  
+
   .grid {
     gap: 2.5rem;
     margin: 0 0.5rem;
