@@ -247,6 +247,7 @@ const handleImageLoad = (event: Event) => {
 .cta-btn.primary:hover {
   background: var(--primary-purple-light);
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .cta-btn.secondary {
@@ -259,6 +260,7 @@ const handleImageLoad = (event: Event) => {
   background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .highlights {
@@ -281,8 +283,8 @@ const handleImageLoad = (event: Event) => {
 
 .highlight-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(191, 64, 255, 0.3);
-  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.15);
+  border-color: rgba(191, 64, 255, 0.5);
+  box-shadow: 0 0 50px rgba(191, 64, 255, 0.5), 0 8px 30px rgba(191, 64, 255, 0.35);
 }
 
 .highlight-card h3 {
@@ -360,7 +362,7 @@ const handleImageLoad = (event: Event) => {
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(147, 51, 234, 0.15);
+  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
 }
 
 /* Animation delays for stagger effect */

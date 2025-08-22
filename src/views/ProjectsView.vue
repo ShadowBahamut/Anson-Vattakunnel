@@ -315,7 +315,7 @@
 .hover-glow:hover {
   animation: glow 0.5s ease-in-out;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+  box-shadow: 0 0 30px rgba(191, 64, 255, 0.6), 0 4px 15px rgba(191, 64, 255, 0.4);
 }
 
 .project-links {
@@ -412,7 +412,7 @@
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.15);
+  box-shadow: 0 0 40px rgba(191, 64, 255, 0.5), 0 8px 25px rgba(191, 64, 255, 0.3);
 }
 
 .card-header {
@@ -473,6 +473,7 @@
 .btn.primary:hover {
   background: var(--primary-purple-light);
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .btn.secondary {
@@ -485,6 +486,7 @@
   background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .btn.small {
@@ -498,6 +500,7 @@
 .btn.small:hover {
   background: var(--primary-purple);
   color: white;
+  box-shadow: 0 0 35px rgba(191, 64, 255, 0.6), 0 6px 20px rgba(191, 64, 255, 0.4);
 }
 
 .cta-section {
@@ -644,7 +647,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.2);
+  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -674,12 +677,13 @@
 .tech-tag.hover-glow:hover {
   animation: glow 0.6s ease-in-out;
   transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 25px rgba(191, 64, 255, 0.7), 0 4px 12px rgba(191, 64, 255, 0.4);
 }
 
 /* Scale animation for project cards */
 .project-card:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 20px 50px rgba(147, 51, 234, 0.15);
+  box-shadow: 0 0 50px rgba(191, 64, 255, 0.6), 0 20px 50px rgba(191, 64, 255, 0.3);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 </style>

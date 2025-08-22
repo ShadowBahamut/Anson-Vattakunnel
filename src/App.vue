@@ -350,7 +350,7 @@ const closeMobileMenu = () => {
 
 .hover-glow:hover {
   animation: glow 0.5s ease-in-out;
-  text-shadow: 0 0 10px rgba(147, 51, 234, 0.7);
+  text-shadow: 0 0 20px rgba(191, 64, 255, 0.8), 0 0 30px rgba(191, 64, 255, 0.6);
 }
 
 .nav-link.router-link-active {

@@ -302,6 +302,7 @@
 .btn.primary:hover {
   background: var(--primary-purple-light);
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .btn.secondary {
@@ -314,6 +315,7 @@
   background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .btn.outline {
@@ -326,6 +328,7 @@
   background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .btn-icon {
@@ -364,6 +367,7 @@
 
 .info-list li:hover {
   transform: translateX(4px);
+  box-shadow: 0 0 20px rgba(191, 64, 255, 0.4), 0 4px 15px rgba(191, 64, 255, 0.2);
 }
 
 .info-icon {
@@ -514,7 +518,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.2);
+  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
