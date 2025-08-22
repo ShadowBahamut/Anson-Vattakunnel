@@ -9,12 +9,12 @@
   --vt-c-black-soft: #16161d;
   --vt-c-black-mute: #1c1c27;
 
-  /* Primary Purple Palette */
-  --primary-purple: #8b5cf6;
-  --primary-purple-light: #a78bfa;
-  --primary-purple-lighter: #c4b5fd;
-  --primary-purple-dark: #7c3aed;
-  --primary-purple-darker: #6d28d9;
+  /* Primary Purple Palette - Neon Purple */
+  --primary-purple: #bf40ff;
+  --primary-purple-light: #d966ff;
+  --primary-purple-lighter: #e699ff;
+  --primary-purple-dark: #a020f0;
+  --primary-purple-darker: #9400d3;
   
   /* Accent Colors */
   --accent-pink: #ec4899;

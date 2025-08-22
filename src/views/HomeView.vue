@@ -3,7 +3,7 @@
     <section class="hero animate-gradient">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="name typewriter-text animate-fade-in-up">Anson Vattakunnel</h1>
+          <h1 class="name animate-fade-in-up">Anson Vattakunnel</h1>
           <p class="title animate-fade-in-up" style="animation-delay: 0.3s;">Electrical & Computer Engineering Student</p>
           <p class="subtitle animate-fade-in-up" style="animation-delay: 0.6s;">UCT • FOSS Advocate • Linux Kernel Contributor</p>
           <p class="description animate-fade-in-up" style="animation-delay: 0.9s;">
@@ -11,8 +11,8 @@
             and innovative solutions at the intersection of hardware and software.
           </p>
           <div class="cta-buttons animate-fade-in-up" style="animation-delay: 1.2s;">
-            <router-link to="/projects" class="cta-btn primary animate-pulse">View Projects</router-link>
-            <router-link to="/cv" class="cta-btn secondary animate-pulse" style="animation-delay: 0.5s;">Download CV</router-link>
+            <router-link to="/projects" class="cta-btn primary">View Projects</router-link>
+            <router-link to="/cv" class="cta-btn secondary">Download CV</router-link>
           </div>
         </div>
         <div class="hero-photo animate-fade-in-up" style="animation-delay: 0.5s;">
@@ -108,6 +108,16 @@ const handleImageLoad = (event: Event) => {
 
 .hero {
   margin-bottom: 4rem;
+  position: relative;
+  padding: 3rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, 
+    rgba(191, 64, 255, 0.03) 0%, 
+    rgba(217, 102, 255, 0.05) 50%, 
+    rgba(191, 64, 255, 0.03) 100%);
+  border: 1px solid rgba(191, 64, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(191, 64, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .hero-content {
@@ -115,6 +125,8 @@ const handleImageLoad = (event: Event) => {
   grid-template-columns: 1fr 300px;
   gap: 4rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {
@@ -122,11 +134,13 @@ const handleImageLoad = (event: Event) => {
 }
 
 .name {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--primary-purple);
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 1.1;
+  white-space: nowrap;
+  text-shadow: 0 0 20px rgba(191, 64, 255, 0.5);
 }
 
 .title {
@@ -216,12 +230,13 @@ const handleImageLoad = (event: Event) => {
 }
 
 .cta-btn {
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   display: inline-block;
+  box-shadow: 0 4px 15px rgba(191, 64, 255, 0.25);
 }
 
 .cta-btn.primary {
@@ -256,14 +271,18 @@ const handleImageLoad = (event: Event) => {
 .highlight-card {
   padding: 2rem;
   background: var(--color-background-soft);
-  border-radius: 12px;
+  border-radius: 20px;
   text-align: center;
-  border: 1px solid var(--color-border);
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(191, 64, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .highlight-card:hover {
   transform: translateY(-4px);
+  border-color: rgba(191, 64, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.15);
 }
 
 .highlight-card h3 {
@@ -290,24 +309,6 @@ const handleImageLoad = (event: Event) => {
   line-height: 1.6;
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-
-/* Custom animations */
-.typewriter-text {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid var(--primary-purple);
-  animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
-}
-
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  0%, 50% { border-color: var(--primary-purple); }
-  51%, 100% { border-color: transparent; }
 }
 
 /* Enhanced animations */
@@ -382,6 +383,15 @@ const handleImageLoad = (event: Event) => {
 @media (max-width: 768px) {
   .home {
     padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+
+  .pcb-circuit {
+    opacity: 0.2;
   }
 
   .hero-content {

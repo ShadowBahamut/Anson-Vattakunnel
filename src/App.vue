@@ -1,5 +1,124 @@
 <template>
   <div id="app">
+    <!-- Global PCB Background -->
+    <div class="pcb-background">
+      <svg class="pcb-circuit" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+            <feFlood flood-color="#bf40ff" flood-opacity="1"/>
+            <feComposite in2="coloredBlur" operator="in"/>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <radialGradient id="dot-gradient">
+            <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+            <stop offset="20%" style="stop-color:#f0b3ff;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#bf40ff;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#bf40ff;stop-opacity:0.2" />
+          </radialGradient>
+          <linearGradient id="trace-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#bf40ff;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#bf40ff;stop-opacity:0.4" />
+          </linearGradient>
+        </defs>
+        
+        <!-- Realistic PCB Trace 1 with 45-degree angles -->
+        <g class="trace-group">
+          <path id="trace1" d="M 200,0 L 200,300 L 250,350 L 400,350 L 450,400 L 450,600 L 500,650 L 700,650 L 750,700 L 750,900 L 800,950 L 1000,950 L 1050,1000 L 1050,1080" 
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <!-- Vias at key points -->
+          <circle cx="200" cy="300" r="6" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="200" cy="300" r="3" fill="#bf40ff" opacity="0.8"/>
+          <circle cx="450" cy="600" r="6" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="450" cy="600" r="3" fill="#bf40ff" opacity="0.8"/>
+          <circle cx="750" cy="900" r="6" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="750" cy="900" r="3" fill="#bf40ff" opacity="0.8"/>
+          <circle cx="1050" cy="1080" r="8" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.8"/>
+          <circle cx="1050" cy="1080" r="4" fill="#bf40ff" opacity="1"/>
+          
+          <circle r="10" fill="url(#dot-gradient)" filter="url(#neon-glow)">
+            <animateMotion dur="6s" repeatCount="indefinite">
+              <mpath href="#trace1"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        
+        <!-- Realistic PCB Trace 2 -->
+        <g class="trace-group">
+          <path id="trace2" d="M 1600,0 L 1600,200 L 1550,250 L 1400,250 L 1350,300 L 1350,500 L 1300,550 L 1100,550 L 1050,600 L 1050,800 L 1000,850 L 800,850 L 750,900 L 750,1080" 
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <!-- Vias -->
+          <circle cx="1600" cy="200" r="6" fill="none" stroke="#d966ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="1600" cy="200" r="3" fill="#d966ff" opacity="0.8"/>
+          <circle cx="1350" cy="500" r="6" fill="none" stroke="#d966ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="1350" cy="500" r="3" fill="#d966ff" opacity="0.8"/>
+          <circle cx="1050" cy="800" r="6" fill="none" stroke="#d966ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="1050" cy="800" r="3" fill="#d966ff" opacity="0.8"/>
+          <circle cx="750" cy="1080" r="8" fill="none" stroke="#d966ff" stroke-width="2" opacity="0.8"/>
+          <circle cx="750" cy="1080" r="4" fill="#d966ff" opacity="1"/>
+          
+          <circle r="10" fill="url(#dot-gradient)" filter="url(#neon-glow)">
+            <animateMotion dur="8s" repeatCount="indefinite">
+              <mpath href="#trace2"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        
+        <!-- Realistic PCB Trace 3 -->
+        <g class="trace-group">
+          <path id="trace3" d="M 900,0 L 900,150 L 850,200 L 700,200 L 650,250 L 650,450 L 600,500 L 400,500 L 350,550 L 350,750 L 300,800 L 150,800 L 100,850 L 100,1080" 
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <!-- Vias -->
+          <circle cx="900" cy="150" r="6" fill="none" stroke="#e699ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="900" cy="150" r="3" fill="#e699ff" opacity="0.8"/>
+          <circle cx="650" cy="450" r="6" fill="none" stroke="#e699ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="650" cy="450" r="3" fill="#e699ff" opacity="0.8"/>
+          <circle cx="350" cy="750" r="6" fill="none" stroke="#e699ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="350" cy="750" r="3" fill="#e699ff" opacity="0.8"/>
+          <circle cx="100" cy="1080" r="8" fill="none" stroke="#e699ff" stroke-width="2" opacity="0.8"/>
+          <circle cx="100" cy="1080" r="4" fill="#e699ff" opacity="1"/>
+          
+          <circle r="10" fill="url(#dot-gradient)" filter="url(#neon-glow)">
+            <animateMotion dur="10s" repeatCount="indefinite">
+              <mpath href="#trace3"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        
+        <!-- Additional PCB Trace 4 -->
+        <g class="trace-group">
+          <path id="trace4" d="M 1300,0 L 1300,250 L 1250,300 L 1100,300 L 1050,350 L 1050,550 L 1100,600 L 1250,600 L 1300,650 L 1300,850 L 1350,900 L 1500,900 L 1550,950 L 1550,1080" 
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <!-- Vias -->
+          <circle cx="1300" cy="250" r="6" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="1300" cy="250" r="3" fill="#bf40ff" opacity="0.8"/>
+          <circle cx="1300" cy="850" r="6" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.6"/>
+          <circle cx="1300" cy="850" r="3" fill="#bf40ff" opacity="0.8"/>
+          <circle cx="1550" cy="1080" r="8" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.8"/>
+          <circle cx="1550" cy="1080" r="4" fill="#bf40ff" opacity="1"/>
+          
+          <circle r="10" fill="url(#dot-gradient)" filter="url(#neon-glow)">
+            <animateMotion dur="7s" repeatCount="indefinite">
+              <mpath href="#trace4"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg>
+    </div>
     <header class="app-header">
       <nav class="main-nav">
         <div class="nav-brand">
@@ -111,6 +230,56 @@ const closeMobileMenu = () => {
   flex-direction: column;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Global PCB Background */
+.pcb-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pcb-circuit {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  animation: pulse-circuit 20s ease-in-out infinite;
+}
+
+@keyframes pulse-circuit {
+  0%, 100% { 
+    opacity: 0.2;
+  }
+  50% { 
+    opacity: 0.5;
+  }
+}
+
+.trace-group {
+  animation: trace-glow 15s ease-in-out infinite;
+}
+
+.trace-group:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.trace-group:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes trace-glow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5) drop-shadow(0 0 30px rgba(191, 64, 255, 0.8));
+  }
 }
 
 .app-header {
