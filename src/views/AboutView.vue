@@ -64,7 +64,7 @@
                 <li>MATLAB / Simulink & LTSpice</li>
                 <li>STM32CubeIDE & GNU Toolchains</li>
                 <li>Git & Version Control</li>
-                <li>Arduino / Raspberry Pi</li>
+                <li>Arduino / ESP32</li>
                 <li>LaTeX & Technical Documentation</li>
                 <li>Hyprland & Linux Customization</li>
                 <li>Animation & UI/UX Design for Web & Desktop</li>
