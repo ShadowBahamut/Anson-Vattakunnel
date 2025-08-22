@@ -256,8 +256,8 @@
 
 .skill-category:hover {
   transform: translateY(-4px);
-  border-color: rgba(191, 64, 255, 0.3);
-  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.15);
+  border-color: rgba(191, 64, 255, 0.5);
+  box-shadow: 0 0 40px rgba(191, 64, 255, 0.4), 0 8px 30px rgba(191, 64, 255, 0.3);
 }
 
 .skill-category h3 {
@@ -300,8 +300,8 @@
 
 .value-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(191, 64, 255, 0.3);
-  box-shadow: 0 8px 30px rgba(191, 64, 255, 0.15);
+  border-color: rgba(191, 64, 255, 0.5);
+  box-shadow: 0 0 50px rgba(191, 64, 255, 0.5), 0 8px 30px rgba(191, 64, 255, 0.35);
 }
 
 .value-icon {
@@ -388,7 +388,7 @@
   background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(191, 64, 255, 0.4);
+  box-shadow: 0 0 40px rgba(191, 64, 255, 0.6), 0 6px 20px rgba(191, 64, 255, 0.4);
 }
 
 .email-link svg {
@@ -422,6 +422,7 @@
 .btn.primary:hover {
   background: var(--primary-purple-light);
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 .btn.secondary {
@@ -434,6 +435,7 @@
   background: var(--primary-purple);
   color: white;
   transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(191, 64, 255, 0.6), 0 8px 25px rgba(191, 64, 255, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -541,7 +543,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.2);
+  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
