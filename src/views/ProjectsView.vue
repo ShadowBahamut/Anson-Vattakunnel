@@ -35,8 +35,7 @@
               <span class="tech-tag hover-glow">Cryptography</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn primary">Source Code</a>
-              <a href="https://www.news.uct.ac.za/article/-2023-08-04-blockchain-solution-to-contested-elections" target="_blank" rel="noopener noreferrer" class="btn secondary">
+              <a href="https://www.news.uct.ac.za/article/-2023-08-04-blockchain-solution-to-contested-elections" target="_blank" rel="noopener noreferrer" class="btn primary">
                 <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M4 22h16l-7-4V8l7-4H4l7 4v10l-7 4z"/>
                   <path d="M11 13h2"/>
@@ -115,6 +114,12 @@
               <span class="tech-tag hover-glow">Pathfinding</span>
             </div>
             <div class="card-footer">
+              <a :href="micromouseVideo" target="_blank" rel="noopener noreferrer" class="btn small primary">
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                View Demo
+              </a>
               <a href="https://github.com/ShadowBahamut/micromouse" target="_blank" rel="noopener noreferrer" class="btn small">View on GitHub</a>
             </div>
           </div>
@@ -145,7 +150,7 @@
               <span class="tech-tag hover-glow">CSS3</span>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn small">Source Code</a>
+              <a href="https://github.com/ShadowBahamut/Anson-Vattakunnel" target="_blank" rel="noopener noreferrer" class="btn small">Source Code</a>
             </div>
           </div>
 
@@ -172,7 +177,7 @@
               <span class="tech-tag hover-glow">Animation</span>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn small">View Fork</a>
+              <a href="https://github.com/ShadowBahamut/hyprlock-animated" target="_blank" rel="noopener noreferrer" class="btn small">View Fork</a>
             </div>
           </div>
 
@@ -219,6 +224,7 @@
 </template>
 
 <script setup lang="ts">
+import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
 </script>
 
 <style scoped>
@@ -482,6 +488,9 @@
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -534,6 +543,18 @@
   background: var(--primary-purple);
   color: white;
   box-shadow: 0 0 35px rgba(191, 64, 255, 0.6), 0 6px 20px rgba(191, 64, 255, 0.4);
+}
+
+.btn.small.primary {
+  background: var(--primary-purple);
+  color: white;
+  border-color: var(--primary-purple);
+}
+
+.btn.small.primary:hover {
+  background: var(--primary-purple-light);
+  border-color: var(--primary-purple-light);
+  box-shadow: 0 0 40px rgba(191, 64, 255, 0.7), 0 8px 25px rgba(191, 64, 255, 0.5);
 }
 
 .btn-icon {
