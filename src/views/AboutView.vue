@@ -119,12 +119,19 @@
           <p>Have a project idea or want to collaborate? I'd love to hear from you!</p>
 
           <div class="email-container">
-            <a href="mailto:anson.vattakunnel@gmail.com" class="email-link">
+            <button @click="copyEmail" class="email-link" :aria-label="copied ? 'Email copied' : 'Copy email address'">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
                 <path d="m22 7-10 5L2 7" />
               </svg>
-              <span>anson.vattakunnel@gmail.com</span>
+              <span>{{ copied ? 'Copied to clipboard!' : 'Copy my email' }}</span>
+            </button>
+            <a :href="emailHref" class="email-link email-mailto" @focus="revealEmail">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-10 5L2 7" />
+              </svg>
+              <span>Open in mail app</span>
             </a>
           </div>
 
@@ -139,6 +146,29 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue'
+
+const copied = ref(false)
+
+const emailReversed = ref('moc.liamg@lekunnkattav.nosna')
+const emailHref = ref('#')
+
+const email = computed(() => emailReversed.value.split('').reverse().join(''))
+
+const revealEmail = () => {
+  emailHref.value = `mailto:${email.value}`
+}
+
+const copyEmail = async () => {
+  try {
+    await navigator.clipboard.writeText(email.value)
+    copied.value = true
+    setTimeout(() => (copied.value = false), 2500)
+  } catch {
+    revealEmail()
+    window.location.href = `mailto:${email.value}`
+  }
+}
 </script>
 
 <style scoped>
@@ -365,6 +395,10 @@
 
 .email-container {
   margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .email-link {
@@ -381,6 +415,8 @@
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(191, 64, 255, 0.2);
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .email-link:hover {
@@ -393,6 +429,12 @@
 .email-link svg {
   width: 24px;
   height: 24px;
+}
+
+.email-mailto {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 .contact-buttons {

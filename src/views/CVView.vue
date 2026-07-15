@@ -58,7 +58,7 @@
 
         <div class="cv-actions">
           <div class="action-buttons">
-            <a href="/CV_Anson%20Benjamin%20Vattakunnel.pdf" download class="btn primary large animate-pulse">
+            <a :href="cvPdf" download class="btn primary large animate-pulse">
               <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7,10 12,15 17,10"/>
@@ -66,7 +66,7 @@
               </svg>
               Download PDF
             </a>
-            <a href="/CV_Anson%20Benjamin%20Vattakunnel.pdf" target="_blank" class="btn secondary large">
+            <a :href="cvPdf" target="_blank" rel="noopener noreferrer" class="btn secondary large">
               <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                 <circle cx="12" cy="12" r="3"/>
@@ -152,6 +152,7 @@
 </template>
 
 <script setup lang="ts">
+import cvPdf from '@/assets/CV_Anson-Vattakunnel.pdf'
 </script>
 
 <style scoped>

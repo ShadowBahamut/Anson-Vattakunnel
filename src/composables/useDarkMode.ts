@@ -1,12 +1,16 @@
 import { ref, onMounted } from 'vue'
 
-const isDarkMode = ref(true) // Default to dark mode
+const isDarkMode = ref(true)
 
 export function useDarkMode() {
   const toggleDarkMode = () => {
     isDarkMode.value = !isDarkMode.value
     updateDOMTheme()
-    localStorage.setItem('darkMode', isDarkMode.value.toString())
+    try {
+      localStorage.setItem('darkMode', isDarkMode.value.toString())
+    } catch {
+      /* localStorage may be unavailable (private mode, cookies blocked) */
+    }
   }
 
   const updateDOMTheme = () => {
@@ -19,9 +23,13 @@ export function useDarkMode() {
   }
 
   const initDarkMode = () => {
-    const savedMode = localStorage.getItem('darkMode')
-    if (savedMode !== null) {
-      isDarkMode.value = savedMode === 'true'
+    try {
+      const savedMode = localStorage.getItem('darkMode')
+      if (savedMode !== null) {
+        isDarkMode.value = savedMode === 'true'
+      }
+    } catch {
+      /* localStorage unavailable — keep default dark mode */
     }
     updateDOMTheme()
   }
