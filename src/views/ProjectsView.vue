@@ -213,7 +213,7 @@
               <span class="tech-tag hover-glow">Pathfinding</span>
             </div>
             <div class="card-footer">
-              <a :href="micromouseVideo" target="_blank" rel="noopener noreferrer" class="btn small primary">
+              <a href="/Micromouse-Solver.mp4" target="_blank" rel="noopener noreferrer" class="btn small primary">
                 <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2">
                   <polygon points="5 3 19 12 5 21 5 3" />
@@ -330,7 +330,6 @@
 </template>
 
 <script setup lang="ts">
-import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
 </script>
 
 <style scoped>
@@ -988,104 +987,6 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   .cta-content p {
     text-align: justify;
   }
-}
-
-/* Enhanced animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 5px rgba(147, 51, 234, 0.3);
-    transform: translateY(0);
-  }
-
-  50% {
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.6), 0 0 30px rgba(147, 51, 234, 0.4);
-    transform: translateY(-3px);
-  }
-
-  100% {
-    box-shadow: 0 0 5px rgba(147, 51, 234, 0.3);
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-float {
-  animation: float 5s ease-in-out infinite;
-}
-
-.animate-scale {
-  animation: scaleIn 0.6s ease-out forwards;
-}
-
-.hover-lift:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Enhanced stagger animation */
-.stagger-children>*:nth-child(1) {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
-}
-
-.stagger-children>*:nth-child(2) {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.4s;
-  opacity: 0;
-}
-
-.stagger-children>*:nth-child(3) {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.6s;
-  opacity: 0;
-}
-
-.stagger-children>*:nth-child(4) {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.8s;
-  opacity: 0;
 }
 
 /* Enhanced hover effects for tech tags */

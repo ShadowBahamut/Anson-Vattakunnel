@@ -86,6 +86,35 @@
   }
 }
 
+/* Text glow animation (for nav links and text elements) */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(147, 51, 234, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(147, 51, 234, 0.8), 0 0 30px rgba(147, 51, 234, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(147, 51, 234, 0.5);
+  }
+}
+
+/* Bounce animation (custom variant for CV document icon) */
+@keyframes bounceCustom {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+}
+
 /* Gradient animation */
 @keyframes gradientShift {
   0% {
@@ -141,7 +170,7 @@
     transform: rotate(20deg);
   }
   75% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
 }
 
@@ -167,7 +196,7 @@
 /* Slide animations */
 @keyframes slideInLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-30px);
     opacity: 0;
   }
   to {
@@ -212,15 +241,18 @@
 
 /* Utility classes */
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
 }
 
 .animate-fade-in-down {
-  animation: fadeInDown 0.6s ease-out;
+  animation: fadeInDown 0.4s ease-out forwards;
+  opacity: 0;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.5s ease-out;
+  animation: scaleIn 0.6s ease-out forwards;
+  opacity: 0;
 }
 
 .animate-float {
@@ -247,8 +279,8 @@
 }
 
 .hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
 }
 
 .hover-grow {
@@ -270,15 +302,15 @@
 /* Stagger animations for lists */
 .stagger-children > * {
   opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
-.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
-.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
-.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
-.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+.stagger-children > *:nth-child(1) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.6s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.8s; }
+.stagger-children > *:nth-child(5) { animation-delay: 1s; }
+.stagger-children > *:nth-child(6) { animation-delay: 1.2s; }
 
 /* Parallax scrolling effect */
 .parallax {
@@ -303,4 +335,16 @@
   width: 40px;
   height: 40px;
   animation: loading 1s linear infinite;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,25 +1,9 @@
 <template>
   <div id="app">
     <!-- Global PCB Background -->
-    <div class="pcb-background">
-      <svg class="pcb-circuit" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <div class="pcb-background" aria-hidden="true">
+      <svg class="pcb-circuit" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
-          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-          <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
-            <feFlood flood-color="#bf40ff" flood-opacity="1"/>
-            <feComposite in2="coloredBlur" operator="in"/>
-            <feMerge>
-              <feMergeNode/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
           <radialGradient id="dot-gradient">
             <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
             <stop offset="20%" style="stop-color:#f0b3ff;stop-opacity:1" />
@@ -34,8 +18,8 @@
         
         <!-- Realistic PCB Trace 1 with 45-degree angles -->
         <g class="trace-group">
-          <path id="trace1" d="M 200,0 L 200,300 L 250,350 L 400,350 L 450,400 L 450,600 L 500,650 L 700,650 L 750,700 L 750,900 L 800,950 L 1000,950 L 1050,1000 L 1050,1080" 
-                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <path id="trace1" d="M 200,0 L 200,300 L 250,350 L 400,350 L 450,400 L 450,600 L 500,650 L 700,650 L 750,700 L 750,900 L 800,950 L 1000,950 L 1050,1000 L 1050,1080"
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           <!-- Vias at key points -->
           <circle cx="200" cy="300" r="6" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.6"/>
           <circle cx="200" cy="300" r="3" fill="#bf40ff" opacity="0.8"/>
@@ -46,7 +30,7 @@
           <circle cx="1050" cy="1080" r="8" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.8"/>
           <circle cx="1050" cy="1080" r="4" fill="#bf40ff" opacity="1"/>
           
-          <circle r="10" fill="url(#dot-gradient)" filter="url(#neon-glow)">
+          <circle r="10" fill="url(#dot-gradient)" class="pcb-dot">
             <animateMotion dur="6s" repeatCount="indefinite">
               <mpath href="#trace1"/>
             </animateMotion>
@@ -56,8 +40,8 @@
         
         <!-- Realistic PCB Trace 2 -->
         <g class="trace-group">
-          <path id="trace2" d="M 1600,0 L 1600,200 L 1550,250 L 1400,250 L 1350,300 L 1350,500 L 1300,550 L 1100,550 L 1050,600 L 1050,800 L 1000,850 L 800,850 L 750,900 L 750,1080" 
-                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <path id="trace2" d="M 1600,0 L 1600,200 L 1550,250 L 1400,250 L 1350,300 L 1350,500 L 1300,550 L 1100,550 L 1050,600 L 1050,800 L 1000,850 L 800,850 L 750,900 L 750,1080"
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           <!-- Vias -->
           <circle cx="1600" cy="200" r="6" fill="none" stroke="#d966ff" stroke-width="2" opacity="0.6"/>
           <circle cx="1600" cy="200" r="3" fill="#d966ff" opacity="0.8"/>
@@ -68,7 +52,7 @@
           <circle cx="750" cy="1080" r="8" fill="none" stroke="#d966ff" stroke-width="2" opacity="0.8"/>
           <circle cx="750" cy="1080" r="4" fill="#d966ff" opacity="1"/>
           
-          <circle r="10" fill="url(#dot-gradient)" filter="url(#neon-glow)">
+          <circle r="10" fill="url(#dot-gradient)" class="pcb-dot">
             <animateMotion dur="8s" repeatCount="indefinite">
               <mpath href="#trace2"/>
             </animateMotion>
@@ -78,8 +62,8 @@
         
         <!-- Realistic PCB Trace 3 -->
         <g class="trace-group">
-          <path id="trace3" d="M 900,0 L 900,150 L 850,200 L 700,200 L 650,250 L 650,450 L 600,500 L 400,500 L 350,550 L 350,750 L 300,800 L 150,800 L 100,850 L 100,1080" 
-                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <path id="trace3" d="M 900,0 L 900,150 L 850,200 L 700,200 L 650,250 L 650,450 L 600,500 L 400,500 L 350,550 L 350,750 L 300,800 L 150,800 L 100,850 L 100,1080"
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           <!-- Vias -->
           <circle cx="900" cy="150" r="6" fill="none" stroke="#e699ff" stroke-width="2" opacity="0.6"/>
           <circle cx="900" cy="150" r="3" fill="#e699ff" opacity="0.8"/>
@@ -90,7 +74,7 @@
           <circle cx="100" cy="1080" r="8" fill="none" stroke="#e699ff" stroke-width="2" opacity="0.8"/>
           <circle cx="100" cy="1080" r="4" fill="#e699ff" opacity="1"/>
           
-          <circle r="10" fill="url(#dot-gradient)" filter="url(#neon-glow)">
+          <circle r="10" fill="url(#dot-gradient)" class="pcb-dot">
             <animateMotion dur="10s" repeatCount="indefinite">
               <mpath href="#trace3"/>
             </animateMotion>
@@ -100,8 +84,8 @@
         
         <!-- Additional PCB Trace 4 -->
         <g class="trace-group">
-          <path id="trace4" d="M 1300,0 L 1300,250 L 1250,300 L 1100,300 L 1050,350 L 1050,550 L 1100,600 L 1250,600 L 1300,650 L 1300,850 L 1350,900 L 1500,900 L 1550,950 L 1550,1080" 
-                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <path id="trace4" d="M 1300,0 L 1300,250 L 1250,300 L 1100,300 L 1050,350 L 1050,550 L 1100,600 L 1250,600 L 1300,650 L 1300,850 L 1350,900 L 1500,900 L 1550,950 L 1550,1080"
+                stroke="url(#trace-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           <!-- Vias -->
           <circle cx="1300" cy="250" r="6" fill="none" stroke="#bf40ff" stroke-width="2" opacity="0.6"/>
           <circle cx="1300" cy="250" r="3" fill="#bf40ff" opacity="0.8"/>
@@ -120,15 +104,8 @@
       </svg>
       
       <!-- Mobile-optimized PCB traces (portrait mode) -->
-      <svg class="pcb-circuit pcb-circuit-mobile" viewBox="0 0 400 2000" preserveAspectRatio="xMinYMin slice" style="display: none;">
+      <svg class="pcb-circuit pcb-circuit-mobile" viewBox="0 0 400 2000" preserveAspectRatio="xMinYMin slice" style="display: none;" aria-hidden="true">
         <defs>
-          <filter id="mobile-glow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
           <radialGradient id="mobile-dot-gradient">
             <stop offset="0%" style="stop-color:#bf40ff;stop-opacity:1" />
             <stop offset="100%" style="stop-color:#bf40ff;stop-opacity:0.3" />
@@ -137,8 +114,8 @@
         
         <!-- Mobile Trace 1 - Primary vertical path -->
         <g class="trace-group">
-          <path id="mobile-trace1" d="M 50,0 L 50,200 L 100,250 L 150,250 L 200,300 L 200,500 L 150,550 L 100,550 L 50,600 L 50,800 L 100,850 L 150,850 L 200,900 L 200,1100 L 150,1150 L 100,1150 L 50,1200 L 50,1400 L 100,1450 L 150,1450 L 200,1500 L 200,1700 L 150,1750 L 100,1750 L 50,1800 L 50,2000" 
-                stroke="#bf40ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" filter="url(#mobile-glow)"/>
+          <path id="mobile-trace1" d="M 50,0 L 50,200 L 100,250 L 150,250 L 200,300 L 200,500 L 150,550 L 100,550 L 50,600 L 50,800 L 100,850 L 150,850 L 200,900 L 200,1100 L 150,1150 L 100,1150 L 50,1200 L 50,1400 L 100,1450 L 150,1450 L 200,1500 L 200,1700 L 150,1750 L 100,1750 L 50,1800 L 50,2000"
+                stroke="#bf40ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
           <!-- Vias at junctions -->
           <circle cx="50" cy="200" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
           <circle cx="50" cy="200" r="2" fill="#bf40ff" opacity="0.7"/>
@@ -153,7 +130,7 @@
           <circle cx="200" cy="1700" r="4" fill="none" stroke="#bf40ff" stroke-width="1.5" opacity="0.5"/>
           <circle cx="200" cy="1700" r="2" fill="#bf40ff" opacity="0.7"/>
           
-          <circle r="6" fill="url(#mobile-dot-gradient)" filter="url(#mobile-glow)">
+          <circle r="6" fill="url(#mobile-dot-gradient)" class="pcb-dot">
             <animateMotion dur="8s" repeatCount="indefinite">
               <mpath href="#mobile-trace1"/>
             </animateMotion>
@@ -164,7 +141,7 @@
         <!-- Mobile Trace 2 - Secondary path -->
         <g class="trace-group">
           <path id="mobile-trace2" d="M 350,0 L 350,150 L 300,200 L 250,200 L 200,250 L 200,450 L 250,500 L 300,500 L 350,550 L 350,750 L 300,800 L 250,800 L 200,850 L 200,1050 L 250,1100 L 300,1100 L 350,1150 L 350,1350 L 300,1400 L 250,1400 L 200,1450 L 200,1650 L 250,1700 L 300,1700 L 350,1750 L 350,1950 L 300,2000" 
-                stroke="#d966ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3" filter="url(#mobile-glow)"/>
+                stroke="#d966ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
           <!-- Vias -->
           <circle cx="350" cy="100" r="4" fill="none" stroke="#d966ff" stroke-width="1.5" opacity="0.5"/>
           <circle cx="350" cy="100" r="2" fill="#d966ff" opacity="0.7"/>
@@ -173,7 +150,7 @@
           <circle cx="350" cy="600" r="4" fill="none" stroke="#d966ff" stroke-width="1.5" opacity="0.5"/>
           <circle cx="350" cy="600" r="2" fill="#d966ff" opacity="0.7"/>
           
-          <circle r="6" fill="url(#mobile-dot-gradient)" filter="url(#mobile-glow)">
+          <circle r="6" fill="url(#mobile-dot-gradient)" class="pcb-dot">
             <animateMotion dur="10s" repeatCount="indefinite">
               <mpath href="#mobile-trace2"/>
             </animateMotion>
@@ -184,7 +161,7 @@
         <!-- Mobile Trace 3 - Zigzag path -->
         <g class="trace-group">
           <path id="mobile-trace3" d="M 150,0 L 150,180 L 200,230 L 250,230 L 300,280 L 300,480 L 250,530 L 200,530 L 150,580 L 150,780 L 100,830 L 50,830 L 0,880 L 0,1080 L 50,1130 L 100,1130 L 150,1180 L 150,1380 L 200,1430 L 250,1430 L 300,1480 L 300,1680 L 250,1730 L 200,1730 L 150,1780 L 150,1980 L 100,2000" 
-                stroke="#e699ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.25" filter="url(#mobile-glow)"/>
+                stroke="#e699ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
           <!-- Vias -->
           <circle cx="150" cy="120" r="4" fill="none" stroke="#e699ff" stroke-width="1.5" opacity="0.5"/>
           <circle cx="150" cy="120" r="2" fill="#e699ff" opacity="0.7"/>
@@ -193,7 +170,7 @@
           <circle cx="150" cy="520" r="4" fill="none" stroke="#e699ff" stroke-width="1.5" opacity="0.5"/>
           <circle cx="150" cy="520" r="2" fill="#e699ff" opacity="0.7"/>
           
-          <circle r="6" fill="url(#mobile-dot-gradient)" filter="url(#mobile-glow)">
+          <circle r="6" fill="url(#mobile-dot-gradient)" class="pcb-dot">
             <animateMotion dur="12s" repeatCount="indefinite">
               <mpath href="#mobile-trace3"/>
             </animateMotion>
@@ -202,6 +179,7 @@
         </g>
       </svg>
     </div>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header class="app-header">
       <nav class="main-nav">
         <div class="nav-brand">
@@ -283,7 +261,7 @@
       </div>
     </header>
 
-    <main class="app-main">
+    <main class="app-main" id="main-content">
       <router-view />
     </main>
 
@@ -307,6 +285,24 @@ const closeMobileMenu = () => {
 </script>
 
 <style scoped>
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--primary-purple);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 0;
+  z-index: 10000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 #app {
   min-height: 100vh;
   display: flex;
@@ -352,7 +348,8 @@ const closeMobileMenu = () => {
 }
 
 .trace-group {
-  animation: trace-glow 15s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(191, 64, 255, 0.4));
+  animation: trace-pulse 15s ease-in-out infinite;
 }
 
 .trace-group:nth-child(2) {
@@ -363,12 +360,19 @@ const closeMobileMenu = () => {
   animation-delay: 10s;
 }
 
-@keyframes trace-glow {
+.pcb-dot {
+  filter: drop-shadow(0 0 8px rgba(191, 64, 255, 0.8));
+  will-change: transform;
+}
+
+@keyframes trace-pulse {
   0%, 100% {
-    filter: brightness(1);
+    opacity: 0.6;
+    filter: drop-shadow(0 0 4px rgba(191, 64, 255, 0.3));
   }
   50% {
-    filter: brightness(1.5) drop-shadow(0 0 30px rgba(191, 64, 255, 0.8));
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(191, 64, 255, 0.7));
   }
 }
 
@@ -383,9 +387,7 @@ const closeMobileMenu = () => {
   backdrop-filter: blur(10px);
   width: 100vw;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.main-nav {
+}.main-nav {
   width: 100%;
   padding: 0 2rem;
   display: flex;
@@ -439,7 +441,7 @@ const closeMobileMenu = () => {
 }
 
 .hover-glow:hover {
-  animation: glow 0.5s ease-in-out;
+  animation: textGlow 0.5s ease-in-out;
   text-shadow: 0 0 20px rgba(191, 64, 255, 0.8), 0 0 30px rgba(191, 64, 255, 0.6);
 }
 
@@ -544,7 +546,7 @@ const closeMobileMenu = () => {
   color: white;
 }
 
-/* Mobile dropdown menu */
+  /* Mobile dropdown menu */
 .mobile-menu {
   position: absolute;
   top: 100%;
@@ -553,7 +555,6 @@ const closeMobileMenu = () => {
   background: var(--color-background);
   border-bottom: 2px solid var(--primary-purple);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
   transform-origin: top;
 }
 
@@ -692,39 +693,6 @@ const closeMobileMenu = () => {
 }
 
 /* Custom Animations */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes glow {
-  0% { text-shadow: 0 0 5px rgba(147, 51, 234, 0.5); }
-  50% { text-shadow: 0 0 20px rgba(147, 51, 234, 0.8), 0 0 30px rgba(147, 51, 234, 0.6); }
-  100% { text-shadow: 0 0 5px rgba(147, 51, 234, 0.5); }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }

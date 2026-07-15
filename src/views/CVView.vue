@@ -58,7 +58,7 @@
 
         <div class="cv-actions">
           <div class="action-buttons">
-            <a href="/CV_Anson Benjamin Vattakunnel.pdf" download class="btn primary large animate-pulse">
+            <a href="/CV_Anson%20Benjamin%20Vattakunnel.pdf" download class="btn primary large animate-pulse">
               <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7,10 12,15 17,10"/>
@@ -66,7 +66,7 @@
               </svg>
               Download PDF
             </a>
-            <a href="/CV_Anson Benjamin Vattakunnel.pdf" target="_blank" class="btn secondary large">
+            <a href="/CV_Anson%20Benjamin%20Vattakunnel.pdf" target="_blank" class="btn secondary large">
               <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                 <circle cx="12" cy="12" r="3"/>
@@ -613,104 +613,5 @@
     font-size: 0.9rem;
     padding: 12px 20px;
   }
-}
-
-/* Enhanced animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% { 
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
-  }
-  50% { 
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
-  }
-}
-
-@keyframes bounceCustom {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  75% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-pulse {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.animate-bounce {
-  animation: bounceCustom 2s ease-in-out infinite;
-}
-
-.hover-lift:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Stagger animation for info list */
-.stagger-children > li:nth-child(1) {
-  animation: slideInLeft 0.6s ease-out forwards;
-  animation-delay: 0.1s;
-  opacity: 0;
-}
-
-.stagger-children > li:nth-child(2) {
-  animation: slideInLeft 0.6s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
-}
-
-.stagger-children > li:nth-child(3) {
-  animation: slideInLeft 0.6s ease-out forwards;
-  animation-delay: 0.3s;
-  opacity: 0;
-}
-
-.stagger-children > li:nth-child(4) {
-  animation: slideInLeft 0.6s ease-out forwards;
-  animation-delay: 0.4s;
-  opacity: 0;
-}
-
-.stagger-children > li:nth-child(5) {
-  animation: slideInLeft 0.6s ease-out forwards;
-  animation-delay: 0.5s;
-  opacity: 0;
 }
 </style>

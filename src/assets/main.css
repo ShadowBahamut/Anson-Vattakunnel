@@ -35,10 +35,6 @@ a,
     text-align: center;
   }
 
-  .project-visual {
-    display: none !important;
-  }
-
   .tech-stack {
     flex-wrap: wrap;
     justify-content: center;

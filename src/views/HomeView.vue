@@ -79,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-import profilePhoto from '@/assets/profile-photo-compressed.jpg'
+import profilePhoto from '@/assets/profile-photo-optimized.jpg'
 
 // Handle image loading error
 const handleImageError = (event: Event) => {
@@ -112,13 +112,12 @@ const handleImageLoad = (event: Event) => {
   position: relative;
   padding: 3rem;
   border-radius: 24px;
-  background: linear-gradient(135deg, 
-    rgba(191, 64, 255, 0.03) 0%, 
-    rgba(217, 102, 255, 0.05) 50%, 
+  background: linear-gradient(135deg,
+    rgba(191, 64, 255, 0.03) 0%,
+    rgba(217, 102, 255, 0.05) 50%,
     rgba(191, 64, 255, 0.03) 100%);
   border: 1px solid rgba(191, 64, 255, 0.1);
   box-shadow: 0 10px 40px rgba(191, 64, 255, 0.05);
-  backdrop-filter: blur(10px);
 }
 
 .hero-content {
@@ -140,7 +139,6 @@ const handleImageLoad = (event: Event) => {
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 1.1;
-  white-space: nowrap;
   text-shadow: 0 0 20px rgba(191, 64, 255, 0.5);
 }
 
@@ -283,7 +281,6 @@ const handleImageLoad = (event: Event) => {
   text-align: center;
   border: 1px solid rgba(191, 64, 255, 0.1);
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -319,72 +316,20 @@ const handleImageLoad = (event: Event) => {
   overflow-wrap: break-word;
 }
 
-/* Enhanced animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-fade-in-up {
+/* Enhanced stagger animations */
+.stagger-children > *:nth-child(1) {
   animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
   opacity: 0;
 }
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-pulse {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.animate-gradient {
-  background: linear-gradient(-45deg, var(--color-background), var(--color-background-soft), var(--color-background), var(--color-background-mute));
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
-}
-
-.hover-lift:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
-}
-
-/* Animation delays for stagger effect */
-.stagger-children > *:nth-child(1) { 
-  animation: fadeInUp 0.8s ease-out forwards; 
-  animation-delay: 0.2s; 
+.stagger-children > *:nth-child(2) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
   opacity: 0;
 }
-.stagger-children > *:nth-child(2) { 
-  animation: fadeInUp 0.8s ease-out forwards; 
-  animation-delay: 0.4s; 
-  opacity: 0;
-}
-.stagger-children > *:nth-child(3) { 
-  animation: fadeInUp 0.8s ease-out forwards; 
-  animation-delay: 0.6s; 
+.stagger-children > *:nth-child(3) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
   opacity: 0;
 }
 
@@ -502,7 +447,6 @@ const handleImageLoad = (event: Event) => {
 
   .name {
     font-size: 2rem;
-    white-space: normal;
   }
 
   .title {

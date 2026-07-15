@@ -170,7 +170,6 @@
       rgba(191, 64, 255, 0.03) 100%);
   border: 1px solid rgba(191, 64, 255, 0.1);
   box-shadow: 0 10px 40px rgba(191, 64, 255, 0.05);
-  backdrop-filter: blur(10px);
 }
 
 .about-header h1 {
@@ -205,7 +204,6 @@
       rgba(191, 64, 255, 0.02) 100%);
   border: 1px solid rgba(191, 64, 255, 0.08);
   box-shadow: 0 8px 30px rgba(191, 64, 255, 0.04);
-  backdrop-filter: blur(8px);
 }
 
 .profile-text h2 {
@@ -223,22 +221,6 @@
 
 .animate-wave {
   animation: wave 2s ease-in-out infinite;
-}
-
-@keyframes wave {
-
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(20deg);
-  }
-
-  75% {
-    transform: rotate(-10deg);
-  }
 }
 
 .profile-text p {
@@ -270,7 +252,6 @@
   border-radius: 20px;
   border: 1px solid rgba(191, 64, 255, 0.1);
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -314,7 +295,6 @@
   text-align: center;
   border: 1px solid rgba(191, 64, 255, 0.1);
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -367,7 +347,6 @@
       rgba(191, 64, 255, 0.02) 100%);
   border: 1px solid rgba(191, 64, 255, 0.08);
   box-shadow: 0 8px 30px rgba(191, 64, 255, 0.04);
-  backdrop-filter: blur(8px);
 }
 
 .contact-section h2 {
@@ -667,97 +646,6 @@
     width: 20px;
     height: 20px;
   }
-}
-
-/* Enhanced animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-gradient {
-  background: linear-gradient(-45deg, var(--color-background), var(--color-background-soft), var(--color-background-mute), var(--color-background));
-  background-size: 400% 400%;
-  animation: gradientShift 10s ease infinite;
-}
-
-.hover-lift:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 60px rgba(191, 64, 255, 0.6), 0 15px 40px rgba(191, 64, 255, 0.4);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Enhanced stagger animations */
-.stagger-children>*:nth-child(1) {
-  animation: slideInLeft 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
-}
-
-.stagger-children>*:nth-child(2) {
-  animation: slideInLeft 0.8s ease-out forwards;
-  animation-delay: 0.4s;
-  opacity: 0;
-}
-
-.stagger-children>*:nth-child(3) {
-  animation: slideInLeft 0.8s ease-out forwards;
-  animation-delay: 0.6s;
-  opacity: 0;
 }
 
 /* Floating animation with different delays for value cards */
