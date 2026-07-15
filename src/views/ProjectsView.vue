@@ -173,15 +173,22 @@
                   :key="i"
                   class="pe-cell"
                   :style="{
-                    animationDelay: `${(Math.floor((i - 1) / 8) + ((i - 1) % 8)) * 0.08}s`,
+                    '--col': String((i - 1) % 8),
+                    '--row': String(Math.floor((i - 1) / 8)),
                   }"
                 >
-                  <span class="pe-dot"></span>
+                  <span class="pe-act"></span>
+                  <span class="pe-psum"></span>
                 </div>
               </div>
               <div class="data-flow-labels">
                 <span class="flow-label">Activations →</span>
                 <span class="flow-label">↓ Partial Sums</span>
+              </div>
+              <div class="phase-indicator">
+                <span class="phase-text">Weight Load</span>
+                <span class="phase-text">Activation Flow</span>
+                <span class="phase-text">Partial Sum</span>
               </div>
             </div>
           </div>
@@ -517,36 +524,140 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   background: rgba(191, 64, 255, 0.05);
 }
 
-.pe-dot {
-  width: 8px;
-  height: 8px;
+.pe-act,
+.pe-psum {
+  position: absolute;
   border-radius: 50%;
-  background: var(--primary-purple);
-  animation: pe-pulse 1.8s ease-in-out infinite;
-  opacity: 0.2;
+  opacity: 0;
 }
 
-@keyframes pe-pulse {
-  0% {
-    opacity: 0.15;
-    transform: scale(0.8);
-    box-shadow: 0 0 2px rgba(191, 64, 255, 0.3);
-  }
+.pe-act {
+  width: 10px;
+  height: 10px;
+  background: #4ade80;
+  animation: pe-act-wave 6.25s ease-in-out infinite;
+  animation-delay: calc(var(--col) * 0.15s);
+}
 
-  50% {
+.pe-psum {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-purple-light);
+  animation: pe-psum-wave 6.25s ease-in-out infinite;
+  animation-delay: calc((var(--col) + var(--row)) * 0.15s);
+}
+
+.pe-cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  background: rgba(96, 165, 250, 0);
+  animation: pe-weight-load 6.25s ease-in-out infinite;
+}
+
+@keyframes pe-weight-load {
+  0%, 10%, 100% {
+    background: rgba(96, 165, 250, 0);
+    box-shadow: none;
+  }
+  4% {
+    background: rgba(96, 165, 250, 0.45);
+    box-shadow: 0 0 8px rgba(96, 165, 250, 0.6), inset 0 0 6px rgba(96, 165, 250, 0.4);
+  }
+}
+
+@keyframes pe-act-wave {
+  0%, 5% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  8% {
     opacity: 1;
-    transform: scale(1.3);
-    box-shadow: 0 0 10px rgba(191, 64, 255, 0.8), 0 0 18px rgba(191, 64, 255, 0.4);
+    transform: scale(1.4);
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.9), 0 0 14px rgba(74, 222, 128, 0.5);
   }
+  13% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  18%, 100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
 
-  100% {
-    opacity: 0.15;
-    transform: scale(0.8);
-    box-shadow: 0 0 2px rgba(191, 64, 255, 0.3);
+@keyframes pe-psum-wave {
+  0%, 29% {
+    opacity: 0;
+    transform: scale(0.5);
   }
+  34% {
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(217, 102, 255, 0.9), 0 0 18px rgba(217, 102, 255, 0.5);
+  }
+  42% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  47%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.phase-indicator {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.phase-text {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+  opacity: 0.3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.phase-text:nth-child(1) {
+  animation: phase-weight 6.25s ease-in-out infinite;
+}
+
+.phase-text:nth-child(2) {
+  animation: phase-act-label 6.25s ease-in-out infinite;
+}
+
+.phase-text:nth-child(3) {
+  animation: phase-psum-label 6.25s ease-in-out infinite;
+}
+
+@keyframes phase-weight {
+  0%, 100% { opacity: 0.3; }
+  2% { opacity: 1; text-shadow: 0 0 8px rgba(96, 165, 250, 0.8); }
+  8% { opacity: 0.3; }
+}
+
+@keyframes phase-act-label {
+  0%, 100% { opacity: 0.3; }
+  5% { opacity: 1; text-shadow: 0 0 8px rgba(74, 222, 128, 0.8); }
+  35% { opacity: 1; }
+  40% { opacity: 0.3; }
+}
+
+@keyframes phase-psum-label {
+  0%, 100% { opacity: 0.3; }
+  28% { opacity: 1; text-shadow: 0 0 8px rgba(217, 102, 255, 0.8); }
+  80% { opacity: 1; }
+  85% { opacity: 0.3; }
 }
 
 .data-flow-labels {
@@ -935,13 +1046,22 @@
     height: 22px;
   }
 
-  .pe-dot {
+  .pe-act {
+    width: 8px;
+    height: 8px;
+  }
+
+  .pe-psum {
     width: 6px;
     height: 6px;
   }
 
   .data-flow-labels {
     max-width: 240px;
+  }
+
+  .phase-text {
+    font-size: 0.6rem;
   }
 
   .btn {
@@ -1137,7 +1257,12 @@
     border-radius: 3px;
   }
 
-  .pe-dot {
+  .pe-act {
+    width: 6px;
+    height: 6px;
+  }
+
+  .pe-psum {
     width: 5px;
     height: 5px;
   }
