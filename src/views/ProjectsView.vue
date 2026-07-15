@@ -90,6 +90,97 @@
         </div>
       </section>
 
+      <section
+        class="featured-project thesis-project animate-fade-in-up"
+        style="animation-delay: 0.9s"
+      >
+        <div class="project-showcase">
+          <div class="project-info">
+            <span class="project-label">Thesis Project</span>
+            <h2>
+              <svg
+                class="project-icon"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="7" y="7" width="10" height="10" rx="1" />
+                <line x1="2" y1="12" x2="4" y2="12" />
+                <line x1="20" y1="12" x2="22" y2="12" />
+                <line x1="12" y1="2" x2="12" y2="4" />
+                <line x1="12" y1="20" x2="12" y2="22" />
+              </svg>
+              INT8 Systolic Array CFU
+            </h2>
+            <p class="project-description">
+              A custom hardware accelerator that offloads fully-connected neural network inference
+              to an 8×8 grid of parallel MAC units on an FPGA. Built in the style of Google's
+              CFU-Playground, it accelerates a 3-layer MNIST MLP running under TFLite Micro on a
+              soft RISC-V CPU, using AXI4 DMA to stream weights and activations between external
+              memory and on-chip BRAM — all in pure Verilog.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-tag hover-glow">Verilog</span>
+              <span class="tech-tag hover-glow">FPGA</span>
+              <span class="tech-tag hover-glow">Systolic Array</span>
+              <span class="tech-tag hover-glow">AXI4</span>
+              <span class="tech-tag hover-glow">Neural Network</span>
+              <span class="tech-tag hover-glow">AI Accelerator</span>
+              <span class="tech-tag hover-glow">RISC-V</span>
+              <span class="tech-tag hover-glow">TFLite</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/ShadowBahamut/EEE4022S-Project"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary"
+              >
+                <svg
+                  class="btn-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+                View Source
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="systolic-array-mockup">
+              <div class="array-label">8×8 Weight-Stationary Array</div>
+              <div class="systolic-grid">
+                <div
+                  v-for="i in 64"
+                  :key="i"
+                  class="pe-cell"
+                  :style="{
+                    animationDelay: `${(Math.floor((i - 1) / 8) + ((i - 1) % 8)) * 0.08}s`,
+                  }"
+                >
+                  <span class="pe-dot"></span>
+                </div>
+              </div>
+              <div class="data-flow-labels">
+                <span class="flow-label">Activations →</span>
+                <span class="flow-label">↓ Partial Sums</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="projects-grid">
         <h2 class="section-title">Other Projects</h2>
 
@@ -363,6 +454,110 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   transition: box-shadow 0.3s ease;
 }
 
+/* Thesis project — same inverted tech-tag style as Torquinox */
+.thesis-project .tech-tag {
+  background: transparent;
+  color: var(--primary-purple);
+  border: 1px solid var(--primary-purple);
+}
+
+.thesis-project .tech-tag.hover-glow:hover {
+  background: rgba(191, 64, 255, 0.1);
+  color: var(--primary-purple-light);
+  border-color: var(--primary-purple-light);
+  box-shadow: 0 0 25px rgba(191, 64, 255, 0.4), 0 4px 12px rgba(191, 64, 255, 0.2);
+}
+
+.thesis-project:hover .project-showcase {
+  box-shadow: 0 0 60px rgba(191, 64, 255, 0.3), 0 0 100px rgba(191, 64, 255, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.thesis-project .project-showcase {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Systolic array visual mockup */
+.systolic-array-mockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.array-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.systolic-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 6px;
+  padding: 12px;
+  border: 2px solid var(--primary-purple);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(147, 51, 234, 0.2), inset 0 0 30px rgba(147, 51, 234, 0.08);
+}
+
+.pe-cell {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(191, 64, 255, 0.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(191, 64, 255, 0.05);
+}
+
+.pe-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-purple);
+  animation: pe-pulse 1.8s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+@keyframes pe-pulse {
+  0% {
+    opacity: 0.15;
+    transform: scale(0.8);
+    box-shadow: 0 0 2px rgba(191, 64, 255, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(191, 64, 255, 0.8), 0 0 18px rgba(191, 64, 255, 0.4);
+  }
+
+  100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+    box-shadow: 0 0 2px rgba(191, 64, 255, 0.3);
+  }
+}
+
+.data-flow-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+  padding: 0 0.5rem;
+}
+
+.flow-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary-purple);
+  opacity: 0.7;
+}
+
 .hover-glow:hover:not(.tech-tag) {
   animation: glow 0.5s ease-in-out;
   transform: translateY(-2px);
@@ -618,6 +813,16 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
   .project-visual {
     order: -1;
   }
+
+  .systolic-grid {
+    gap: 4px;
+    padding: 10px;
+  }
+
+  .pe-cell {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -712,6 +917,25 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     font-size: 1rem;
     transform: rotate(90deg);
     margin: 0.1rem 0;
+  }
+
+  .systolic-grid {
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .pe-cell {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pe-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .data-flow-labels {
+    max-width: 240px;
   }
 
   .btn {
@@ -992,6 +1216,34 @@ import micromouseVideo from '@/assets/Micromouse-Solver.mp4'
     font-size: 0.9rem;
     transform: rotate(90deg);
     margin: 0.1rem 0;
+  }
+
+  .systolic-grid {
+    gap: 3px;
+    padding: 6px;
+  }
+
+  .pe-cell {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+  }
+
+  .pe-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .array-label {
+    font-size: 0.7rem;
+  }
+
+  .data-flow-labels {
+    max-width: 200px;
+  }
+
+  .flow-label {
+    font-size: 0.65rem;
   }
 
   .grid {
