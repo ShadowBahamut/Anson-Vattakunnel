@@ -18,9 +18,10 @@
               </svg>
             </h2>
             <p class="animate-fade-in-up" style="animation-delay: 0.9s;">
-              I'm a 4th year Electrical and Computer Engineering student at the University of Cape Town (UCT),
-              passionate about building innovative solutions at the intersection of hardware and software.
-              My journey in technology is driven by curiosity and a commitment to open-source principles.
+              I'm a recent BSc (Eng) Electrical and Computer Engineering graduate from the University
+              of Cape Town (UCT), passionate about building innovative solutions at the intersection
+              of hardware and software. My journey in technology is driven by curiosity and a
+              commitment to open-source principles.
             </p>
             <p class="animate-fade-in-up" style="animation-delay: 1.2s;">
               As a FOSS advocate and privacy-conscious developer, I believe in creating technology that

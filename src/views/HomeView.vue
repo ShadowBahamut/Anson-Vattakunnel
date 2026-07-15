@@ -4,11 +4,12 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="name animate-fade-in-up">Anson Vattakunnel</h1>
-          <p class="title animate-fade-in-up" style="animation-delay: 0.3s;">Electrical & Computer Engineering Student</p>
+          <p class="title animate-fade-in-up" style="animation-delay: 0.3s;">BSc (Eng) Electrical & Computer Engineering Graduate</p>
           <p class="subtitle animate-fade-in-up" style="animation-delay: 0.6s;">UCT • FOSS Advocate • Linux Kernel Contributor</p>
           <p class="description animate-fade-in-up" style="animation-delay: 0.9s;">
-            4th year ECE student passionate about open-source development, privacy-focused technologies,
-            and innovative solutions at the intersection of hardware and software.
+            Recent BSc (Eng) Electrical & Computer Engineering graduate from UCT, passionate about
+            open-source development, privacy-focused technologies, and innovative solutions at the
+            intersection of hardware and software.
           </p>
           <div class="cta-buttons animate-fade-in-up" style="animation-delay: 1.2s;">
             <router-link to="/projects" class="cta-btn primary">View Projects</router-link>
