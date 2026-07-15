@@ -121,7 +121,12 @@
               to an 8×8 grid of parallel MAC units on an FPGA. Built in the style of Google's
               CFU-Playground, it accelerates a 3-layer MNIST MLP running under TFLite Micro on a
               soft RISC-V CPU, using AXI4 DMA to stream weights and activations between external
-              memory and on-chip BRAM — all in pure Verilog.
+              memory and on-chip BRAM. Developed across six incremental phases from software
+              baseline through DMA-based MAC units, on-chip BRAM caching, asynchronous pipelining,
+              AXI4 communication, an 8×8 weight-stationary systolic array, and final BRAM access
+              optimization, achieving <strong>14.12× speedup</strong> over software while maintaining
+              <strong>99% accuracy</strong>. Validated through 996 bottom-up testbench tests using
+              Verilator cycle-accurate simulation, targeting a Xilinx Artix-7 FPGA.
             </p>
             <div class="tech-stack">
               <span class="tech-tag hover-glow">Verilog</span>
@@ -132,6 +137,8 @@
               <span class="tech-tag hover-glow">AI Accelerator</span>
               <span class="tech-tag hover-glow">RISC-V</span>
               <span class="tech-tag hover-glow">TFLite</span>
+              <span class="tech-tag hover-glow">Verilator</span>
+              <span class="tech-tag hover-glow">INT8 Quantization</span>
             </div>
             <div class="project-links">
               <a
